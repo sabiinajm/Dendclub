@@ -6,9 +6,9 @@ function Header() {
             <div
                 className="min-h-[112px] max-w-[1224px] mx-auto py-4 flex justify-between items-center px-2 border-b-[1px] border-[#F3F2F8]">
                 <img className="h-[112px]" src="/assets/images/logo.png" alt="Medclub Logo" />
-                <nav className="hidden md:flex justify-between items-center list-none w-[677px]">
-                    <li className="active border-b-2 border-[#0D9CD8]"><Link to="/">Ana səhifə</Link></li>
-                    <li><a href="#">Haqqımızda</a></li>
+                <nav className=" flex gap-6 justify-between relative items-center list-none overflow-x-scroll lg:overflow-hidden w-[677px]">
+                    <li className="active border-b-2 border-[#0D9CD8] whitespace-nowrap"><Link to="/">Ana səhifə</Link></li>
+                    <li><Link to={'/about'} href="#">Haqqımızda</Link></li>
                     <li><a href="#">Həkimlərimiz</a></li>
                     <li><a href="#">Klinikalar</a></li>
                     <li><a href="#">Apteklər</a></li>
@@ -18,7 +18,7 @@ function Header() {
                 <div className="flex items-center w-[181px] justify-between">
                     <select name="" id="">
                         <option value="">Az</option>
-                        <option value="">Az</option>
+                        <option value="">Ru</option>
                     </select>
                     <div className="relative w-[40px] h-[40px] flex justify-center items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

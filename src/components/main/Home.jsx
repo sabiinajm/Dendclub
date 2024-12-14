@@ -1,7 +1,3 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import { useRef, useState } from "react";
 import Card from "./Card";
 
@@ -17,7 +13,9 @@ function Home() {
         setCurrentSlide(newSlide);
         setIsAtStart(newSlide === 0);
         setIsAtEnd(newSlide === 7);
+        
     };
+    
     const handleDropdownToggle = (index) => {
         setOpenIndex(openIndex === index ? null : index);
     };
@@ -123,12 +121,12 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <p className="text-[#2C2C2E] text-[40px] font-medium text-center py-[60px]">Klinikalarımız</p>
+                <p className="text-[#2C2C2E] text-[25px] md:text-[40px] font-medium text-center py-[60px]">Klinikalarımız</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center max-w-[1224px] w-[95%] mx-auto">
                     {Array.from({ length: 9 }).map((_, index) => (
                         <div key={index} className="min-h-[427px] bg-white shadow-lg rounded-[20px] overflow-hidden">
                             <img className="min-h-[323px] w-full object-cover" src="/assets/images/klinika2.jpg" alt={`Klinika ${index + 1}`} />
-                            <p className="text-center py-7 text-[28px] font-medium text-[#2C2C2E]">Istanbul Klinika NS</p>
+                            <p className="text-center py-7 text-[24px] md:text-[28px] font-medium text-[#2C2C2E]">Istanbul Klinika NS</p>
                         </div>
                     ))}
                 </div>
