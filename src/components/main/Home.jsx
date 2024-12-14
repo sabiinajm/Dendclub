@@ -23,7 +23,7 @@ function Home() {
     };
 
     return (
-        <main className="bg-[#f2f5f8] h-screen pt-[24px]">
+        <main className="bg-[#f2f5f8]  pt-[24px]">
             <div className={`relative max-w-[1224px] overflow-x-hidden px-2 mx-auto`}>
                 {/* Swiper wrapper */}
                 <div className="flex justify-between items-center ">
@@ -124,6 +124,24 @@ function Home() {
                     </div>
                 </div>
                 <p className="text-[#2C2C2E] text-[40px] font-medium text-center py-[60px]">Klinikalarımız</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center max-w-[1224px] w-[95%] mx-auto">
+                    {Array.from({ length: 9 }).map((_, index) => (
+                        <div key={index} className="min-h-[427px] bg-white shadow-lg rounded-[20px] overflow-hidden">
+                            <img className="min-h-[323px] w-full object-cover" src="/assets/images/klinika2.jpg" alt={`Klinika ${index + 1}`} />
+                            <p className="text-center py-7 text-[28px] font-medium text-[#2C2C2E]">Istanbul Klinika NS</p>
+                        </div>
+                    ))}
+                </div>
+                <p className="text-[#2C2C2E] text-2xl font-medium text-center py-[60px]">Daha çox</p>
+                <div className="min-h-[620px] mt-[20rem] relative max-w-[1224px] mx-auto bg-[#F2F5F8]">
+                    <div className="w-full min-h-[600px] md:min-h-[414px] rounded-[20px] bg-[#0D9CD8] absolute bottom-0 mb-[20rem]">
+                        <div className="text-[#F2F5F8] w-[90%] md:w-[480px]">
+                            <h1 className="text-[30px] md:text-[44px] leading-[40px] md:leading-[64px] font-medium pl-8 pt-8">Mobil tətqimiz artıq istifadəyə hazırdır!</h1>
+                            <h3 className="font-normal leading-[28px] text-2xl pt-[22px] pb-[70px] pl-8">İndi yüklə və xidmətimizdən yararlan</h3>
+                        </div>
+                        <img className="absolute h-[500px] lg:h-auto bottom-0 right-0" src="/assets/images/phone.png" alt="" />
+                    </div>
+                </div>
             </div>
         </main>
     );
