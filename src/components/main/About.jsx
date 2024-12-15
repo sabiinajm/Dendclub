@@ -1,8 +1,8 @@
 function About() {
     return (
-        <main className="bg-[#F2F5F8] pb-20">
+        <main className="bg-[#F2F5F8] pt-[70px] pb-20">
             <div className="max-w-[1224px] w-[95%] mx-auto">
-                <div className="max-w-[1224px] w-[95%] flex flex-col md:flex-row justify-between items-end md:items-center pl-0 md:pl-8 pt-[30px] md:pt-0 mx-auto bg-[#0D9CD8] rounded-[20px] my-[36px] z-10">
+                <div className=" flex flex-col md:flex-row justify-between items-end md:items-center pl-0 md:pl-8 pt-[30px] mx-auto bg-[#0D9CD8] rounded-[20px] my-[36px] z-10">
                     <div className="text-white w-[90%] md:w-[480px]">
                         <h1 className="text-3xl leading-[44px] font-medium pr-8">Bizimlə əməkdaşlıq üçün
                             müraciət et!</h1>
