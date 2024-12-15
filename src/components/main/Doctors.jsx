@@ -2,9 +2,6 @@ import { useRef, useState } from "react";
 import Card from "./Card";
 
 import { Pagination } from 'antd';
-const onShowSizeChange = (current, pageSize) => {
-    console.log(current, pageSize);
-};
 
 function Doctors() {
     const [isAtStart, setIsAtStart] = useState(true);
