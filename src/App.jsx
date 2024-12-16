@@ -7,6 +7,7 @@ import Hospitals from "./components/main/Hospitals";
 import Pharmacy from "./components/main/Pharmacy";
 import Blogs from "./components/main/Blogs";
 import Contact from "./components/main/Contact";
+import HospitalDetails from "./components/main/HospitalDetails";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/Haqqımızda" element={<About />} />
           <Route path="/Həkimlərimiz" element={<Doctors />} />
           <Route path="/Klinikalarımız" element={<Hospitals />} />
+          <Route path="/Klinikalarımız/:id" element={<HospitalDetails />} />
           <Route path="/Apteklərimiz" element={<Pharmacy />} />
           <Route path="/Bloglar" element={<Blogs />} />
           <Route path="/Əlaqə" element={<Contact />} />

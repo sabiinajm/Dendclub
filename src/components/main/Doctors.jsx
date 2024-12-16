@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import Card from "./DrCard";
+import DrCard from "./DrCard";
 
 import { Pagination } from 'antd';
 
@@ -89,7 +89,7 @@ function Doctors() {
                 <div className="pt-[45px] pb-[56px]">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
                         {Array.from({ length: 20 }).map((_, index) => (
-                            <Card key={index} />
+                            <DrCard key={index} />
                         ))}
                     </div>
                     <div className="flex justify-center items-center min-h-[300px] mb-[40px]]">
