@@ -1,7 +1,7 @@
 import { Rate } from 'antd';
-function Card() {
+function DrCard() {
     return (
-        <div className="bg-white rounded-[12px] h-[433px] w-[288px] py-[16px] pt-[12px] pb-[28px] flex flex-col items-center">
+        <div className="bg-white rounded-[12px] min-h-[433px] w-[288px] py-[16px] pt-[12px] pb-[28px] flex flex-col items-center">
             <div className="bg-[#F2F5F8] relative h-[203px] w-[256px] flex justify-center items-end rounded-[12px]">
                 <img src="/assets/images/drAylin.png" alt="doctor" className="w-[184px] h-[184px]" />
                 <div className='w-[190px] absolute flex justify-center items-center bottom-[-20px] h-[40px] bg-[#0D9CD8] text-white rounded-[24px] text-base'>
@@ -20,7 +20,7 @@ function Card() {
                         <Rate style={{ color: '#F4B814' }} className='py-3' />
                         <p className='text-sm px-2 text-[#636366]'>(4)</p>
                     </div>
-                    <p className='text-[#636366] text-[12px] text-center'>Lorem ipsum dolor sit amet lorem ipsum ipsum lorem ipsum dolor sit at</p>
+                    <p className='text-[#636366] text-[.75rem] text-center'>Lorem ipsum dolor sit amet lorem ipsum ipsum lorem ipsum dolor sit at</p>
                     <div className='flex justify-between py-[28px]'>
                         <button className='w-[120px] h-[40px] bg-[#F0F0F7] rounded-[8px] text-[#2C2C2E]'>Ətraflı bax</button>
                         <button className='w-[120px] h-[40px] bg-[#0D9CD8] rounded-[8px] text-white'>Növbə götür</button>
@@ -30,4 +30,4 @@ function Card() {
         </div >
     )
 }
-export default Card
+export default DrCard

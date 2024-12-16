@@ -19,8 +19,8 @@ function Header() {
                     <li><Link to={'/Haqqımızda'}>Haqqımızda</Link></li>
                     <li><Link to={'/Həkimlərimiz'}>Həkimlərimiz</Link></li>
                     <li><Link to={'/Klinikalarımız'}>Klinikalar</Link></li>
-                    <li><a href="#">Apteklər</a></li>
-                    <li><a href="#">Bloglar</a></li>
+                    <li><Link to={'/Apteklərimiz'}>Apteklər</Link></li>
+                    <li><Link to={'/Bloglar'}>Bloglar</Link></li>
                     <li><a href="#">Əlaqə</a></li>
                 </nav>
                 <div className="flex items-center w-[181px] justify-between">

@@ -1,12 +1,12 @@
 function About() {
     return (
         <main className="bg-[#F2F5F8] pt-[70px] pb-20">
-            <div className="max-w-[1224px] w-[95%] mx-auto">
+            <div className="max-w-[1224px]  px-2 xl:px-0 mx-auto">
                 <div className=" flex flex-col md:flex-row justify-between items-end md:items-center pl-0 md:pl-8 pt-[30px] mx-auto bg-[#0D9CD8] rounded-[20px] my-[36px] z-10">
-                    <div className="text-white w-[90%] md:w-[480px]">
+                    <div className="text-white w-[90%] md:w-[480px] min-h-[269px]">
                         <h1 className="text-3xl leading-[44px] font-medium pr-8">Bizimlə əməkdaşlıq üçün
                             müraciət et!</h1>
-                        <h3 className="font-normal leading-[28px] text-xl pt-[5px] pb-[40px]">Sizinlə güclənir, daha çox insana çatırıq</h3>
+                        <h3 className="font-normal leading-[28px] text-xl pt-[25px] pb-[40px]">Sizinlə güclənir, daha çox insana çatırıq</h3>
                         <button className="w-[156px] h-[48px] rounded-[8px] bg-[#fff] text-[#0D9CD8] ">Müraciət et</button>
                     </div>
                     <div className="relative min-h-[336px] min-w-[300px]">
@@ -14,11 +14,11 @@ function About() {
                     </div>
                 </div>
                 <div className="text-center">
-                    <h1 className="py-[40px] text-[#030303] text-2xl md:text-[40px]">Haqqımızda</h1>
-                    <p className="text-[#606166] text-[16px] md:text-[24px]">MedClub Azərbaycanda sağlamlıq xidmətlərinə çıxışı asanlaşdırmaq məqsədilə yaradılıb. Burada, xəstələr sadəcə bir neçə addımla ixtisaslaşmış həkimlər və etibarlı klinikalar arasında seçim edə bilərlər. İstifadəçilərə müxtəlif sahələrdə təcrübəli həkimlərdən onlayn növbə götürmə imkanı təklif edirik, bu da onların vaxtına və rahatlığına dəyər qatır. Bizimlə, xəstələr yalnız həkimlərin profillərini və təcrübələrini yoxlamaqla qalmır, həmçinin, xəstə rəylərinə əsaslanaraq düzgün seçim edə bilirlər. Platformamız həm fərdi istifadəçilərə, həm də klinikalara xidmət edərək, hər iki tərəf üçün qarşılıqlı fayda yaradır. Məqsədimiz, keyfiyyətli tibbi xidmətləri hər kəs üçün əlçatan etmək və sağlamlığa qayğı göstərməkdir. Peşəkarlıq və müasir yanaşmamızla daim inkişaf edərək sizə xidmət göstəririk.MedClub Azərbaycanda sağlamlıq xidmətlərinə çıxışı asanlaşdırmaq məqsədilə yaradılıb. Burada, xəstələr sadəcə bir neçə addımla ixtisaslaşmış həkimlər və etibarlı klinikalar arasında seçim edə bilərlər. İstifadəçilərə müxtəlif sahələrdə təcrübəli həkimlərdən onlayn növbə götürmə imkanı təklif edirik, bu da onların vaxtına və rahatlığına dəyər qatır. Bizimlə, xəstələr yalnız həkimlərin profillərini və təcrübələrini yoxlamaqla qalmır, həmçinin, xəstə rəylərinə əsaslanaraq düzgün seçim edə bilirlər. Platformamız həm fərdi istifadəçilərə, həm də klinikalara xidmət edərək, hər iki tərəf üçün qarşılıqlı fayda yaradır. Məqsədimiz, keyfiyyətli tibbi xidmətləri hər kəs üçün əlçatan etmək və sağlamlığa qayğı göstərməkdir. Peşəkarlıq və müasir yanaşmamızla daim inkişaf edərək sizə xidmət göstəririk.</p>
+                    <h1 className="py-[40px] text-[#030303] text-2xl md:text-[2.5rem]">Haqqımızda</h1>
+                    <p className="text-[#606166] text-[1rem] md:text-[1.5rem]">MedClub Azərbaycanda sağlamlıq xidmətlərinə çıxışı asanlaşdırmaq məqsədilə yaradılıb. Burada, xəstələr sadəcə bir neçə addımla ixtisaslaşmış həkimlər və etibarlı klinikalar arasında seçim edə bilərlər. İstifadəçilərə müxtəlif sahələrdə təcrübəli həkimlərdən onlayn növbə götürmə imkanı təklif edirik, bu da onların vaxtına və rahatlığına dəyər qatır. Bizimlə, xəstələr yalnız həkimlərin profillərini və təcrübələrini yoxlamaqla qalmır, həmçinin, xəstə rəylərinə əsaslanaraq düzgün seçim edə bilirlər. Platformamız həm fərdi istifadəçilərə, həm də klinikalara xidmət edərək, hər iki tərəf üçün qarşılıqlı fayda yaradır. Məqsədimiz, keyfiyyətli tibbi xidmətləri hər kəs üçün əlçatan etmək və sağlamlığa qayğı göstərməkdir. Peşəkarlıq və müasir yanaşmamızla daim inkişaf edərək sizə xidmət göstəririk.MedClub Azərbaycanda sağlamlıq xidmətlərinə çıxışı asanlaşdırmaq məqsədilə yaradılıb. Burada, xəstələr sadəcə bir neçə addımla ixtisaslaşmış həkimlər və etibarlı klinikalar arasında seçim edə bilərlər. İstifadəçilərə müxtəlif sahələrdə təcrübəli həkimlərdən onlayn növbə götürmə imkanı təklif edirik, bu da onların vaxtına və rahatlığına dəyər qatır. Bizimlə, xəstələr yalnız həkimlərin profillərini və təcrübələrini yoxlamaqla qalmır, həmçinin, xəstə rəylərinə əsaslanaraq düzgün seçim edə bilirlər. Platformamız həm fərdi istifadəçilərə, həm də klinikalara xidmət edərək, hər iki tərəf üçün qarşılıqlı fayda yaradır. Məqsədimiz, keyfiyyətli tibbi xidmətləri hər kəs üçün əlçatan etmək və sağlamlığa qayğı göstərməkdir. Peşəkarlıq və müasir yanaşmamızla daim inkişaf edərək sizə xidmət göstəririk.</p>
                 </div>
                 <div>
-                    <h1 className="py-[40px] text-center text-[#030303] text-2xl md:text-[40px] pt-[7rem]">Üstüklüklərimiz</h1>
+                    <h1 className="py-[40px] text-center text-[#030303] text-2xl md:text-[2.5rem] pt-[7rem]">Üstüklüklərimiz</h1>
                     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pb-[20rem]">
                         <div className="bg-white rounded-[20px] py-[36px] px-[24px] flex flex-col items-center">
                             <div className="bg-[#D9F1FB] mb-[28px] rounded-[20px] w-[103px] h-[103px] flex justify-center items-center">
@@ -29,8 +29,8 @@ function About() {
                                     <path d="M51.6405 24.9071C51.5852 24.9624 51.4741 25.0182 51.4183 25.0735L38.815 34.957C38.704 35.0681 38.5929 35.0681 38.4265 35.0681H38.3712C38.2601 35.0681 38.0937 35.0128 37.9827 34.957L25.4341 25.0735C25.3788 25.0182 25.2677 24.9624 25.2119 24.9071H32.3743C32.5964 24.9071 32.8186 24.7961 32.9296 24.5739L35.3171 19.7432L37.2602 24.5181C37.3713 24.7403 37.5934 24.9066 37.8156 24.9066H43.1459C43.3123 24.9066 43.4791 24.8513 43.5902 24.7403L45.0338 23.2409L46.422 24.7403C46.5331 24.8513 46.6995 24.9624 46.8663 24.9624L51.6408 24.9629L51.6405 24.9071Z" fill="#0D9CD8" />
                                 </svg>
                             </div>
-                            <h1 className="text-[#2C2C2E] text-[24px] text-center">Həkim və ya uzman tapın</h1>
-                            <p className="text-[#636366] text-[14px] text-center">1000-dən çox həkim və uzman arasından seçim edin. Digər xəstələrin rəylərini oxuyun.</p>
+                            <h1 className="text-[#2C2C2E] text-[1.5rem] text-center">Həkim və ya uzman tapın</h1>
+                            <p className="text-[#636366] text-[.8rem] text-center">1000-dən çox həkim və uzman arasından seçim edin. Digər xəstələrin rəylərini oxuyun.</p>
                         </div>
                         <div className="bg-white rounded-[20px] py-[36px] px-[24px] flex flex-col items-center">
                             <div className="bg-[#D9F1FB] mb-[28px] rounded-[20px] w-[103px] h-[103px] flex justify-center items-center">
@@ -41,8 +41,8 @@ function About() {
                                     <path d="M51.6405 24.9071C51.5852 24.9624 51.4741 25.0182 51.4183 25.0735L38.815 34.957C38.704 35.0681 38.5929 35.0681 38.4265 35.0681H38.3712C38.2601 35.0681 38.0937 35.0128 37.9827 34.957L25.4341 25.0735C25.3788 25.0182 25.2677 24.9624 25.2119 24.9071H32.3743C32.5964 24.9071 32.8186 24.7961 32.9296 24.5739L35.3171 19.7432L37.2602 24.5181C37.3713 24.7403 37.5934 24.9066 37.8156 24.9066H43.1459C43.3123 24.9066 43.4791 24.8513 43.5902 24.7403L45.0338 23.2409L46.422 24.7403C46.5331 24.8513 46.6995 24.9624 46.8663 24.9624L51.6408 24.9629L51.6405 24.9071Z" fill="#0D9CD8" />
                                 </svg>
                             </div>
-                            <h1 className="text-[#2C2C2E] text-[24px] text-center">Həkim və ya uzman tapın</h1>
-                            <p className="text-[#636366] text-[14px] text-center">1000-dən çox həkim və uzman arasından seçim edin. Digər xəstələrin rəylərini oxuyun.</p>
+                            <h1 className="text-[#2C2C2E] text-[1.5rem] text-center">Həkim və ya uzman tapın</h1>
+                            <p className="text-[#636366] text-[.8rem] text-center">1000-dən çox həkim və uzman arasından seçim edin. Digər xəstələrin rəylərini oxuyun.</p>
                         </div>
                         <div className="bg-white rounded-[20px] py-[36px] px-[24px] flex flex-col items-center">
                             <div className="bg-[#D9F1FB] mb-[28px] rounded-[20px] w-[103px] h-[103px] flex justify-center items-center">
@@ -53,8 +53,8 @@ function About() {
                                     <path d="M51.6405 24.9071C51.5852 24.9624 51.4741 25.0182 51.4183 25.0735L38.815 34.957C38.704 35.0681 38.5929 35.0681 38.4265 35.0681H38.3712C38.2601 35.0681 38.0937 35.0128 37.9827 34.957L25.4341 25.0735C25.3788 25.0182 25.2677 24.9624 25.2119 24.9071H32.3743C32.5964 24.9071 32.8186 24.7961 32.9296 24.5739L35.3171 19.7432L37.2602 24.5181C37.3713 24.7403 37.5934 24.9066 37.8156 24.9066H43.1459C43.3123 24.9066 43.4791 24.8513 43.5902 24.7403L45.0338 23.2409L46.422 24.7403C46.5331 24.8513 46.6995 24.9624 46.8663 24.9624L51.6408 24.9629L51.6405 24.9071Z" fill="#0D9CD8" />
                                 </svg>
                             </div>
-                            <h1 className="text-[#2C2C2E] text-[24px] text-center">Həkim və ya uzman tapın</h1>
-                            <p className="text-[#636366] text-[14px] text-center">1000-dən çox həkim və uzman arasından seçim edin. Digər xəstələrin rəylərini oxuyun.</p>
+                            <h1 className="text-[#2C2C2E] text-[1.5rem] text-center">Həkim və ya uzman tapın</h1>
+                            <p className="text-[#636366] text-[.8rem] text-center">1000-dən çox həkim və uzman arasından seçim edin. Digər xəstələrin rəylərini oxuyun.</p>
                         </div>
                     </div>
                 </div>

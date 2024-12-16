@@ -4,6 +4,8 @@ import Home from "./components/main/Home";
 import About from "./components/main/About";
 import Doctors from "./components/main/Doctors";
 import Hospitals from "./components/main/Hospitals";
+import Pharmacy from "./components/main/Pharmacy";
+import Blogs from "./components/main/Blogs";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path="/Haqqımızda" element={<About />} />
           <Route path="/Həkimlərimiz" element={<Doctors />} />
           <Route path="/Klinikalarımız" element={<Hospitals />} />
+          <Route path="/Apteklərimiz" element={<Pharmacy />} />
+          <Route path="/Bloglar" element={<Blogs />} />
         </Route>
       </Routes>
     </>
