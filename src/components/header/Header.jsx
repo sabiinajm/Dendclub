@@ -13,7 +13,7 @@ function Header() {
             <div
                 className="min-h-[112px] max-w-[1224px] mx-auto py-4 flex justify-between items-center px-2 border-b-[1px] border-[#F3F2F8]">
                 <img className="h-[112px]" src="/assets/images/logo.png" alt="Medclub Logo" />
-                <nav className={`justify-center gap-6 lg:justify-between flex-col lg:flex-row fixed lg:static top-0 right-0 bg-[#fff] z-50 h-screen lg:h-auto shadow-lg lg:shadow-none items-center list-none flex overflow-hidden min-w-[400px] lg:w-[677px] ${showMenu ? 'translate-x-0' : 'translate-x-[400px] lg:translate-x-0'} transition-all duration-400`}>
+                <nav className={`justify-center gap-6 lg:justify-between flex-col lg:flex-row fixed lg:static top-0 right-0 bg-[#fff] z-50 h-screen lg:h-auto shadow-lg lg:shadow-none items-center list-none flex overflow-hidden min-w-[320px] lg:w-[677px] ${showMenu ? 'translate-x-0' : 'translate-x-[400px] lg:translate-x-0'} transition-all duration-400`}>
                     <IoCloseOutline onClick={toggleMenu} className="absolute top-[55px] right-[10px] text-4xl hover:scale-125 transition-all cursor-pointer duration-160 hover:text-[#0D9CD8] lg:hidden" />
                     <li className="active border-b-2 border-[#0D9CD8] whitespace-nowrap"><Link to="/">Ana səhifə</Link></li>
                     <li><Link to={'/Haqqımızda'}>Haqqımızda</Link></li>
@@ -21,7 +21,7 @@ function Header() {
                     <li><Link to={'/Klinikalarımız'}>Klinikalar</Link></li>
                     <li><Link to={'/Apteklərimiz'}>Apteklər</Link></li>
                     <li><Link to={'/Bloglar'}>Bloglar</Link></li>
-                    <li><a href="#">Əlaqə</a></li>
+                    <li><Link to={'/Əlaqə'}>Əlaqə</Link></li>
                 </nav>
                 <div className="flex items-center w-[181px] justify-between">
                     <select name="" id="" className="cursor-pointer">

@@ -6,6 +6,7 @@ import Doctors from "./components/main/Doctors";
 import Hospitals from "./components/main/Hospitals";
 import Pharmacy from "./components/main/Pharmacy";
 import Blogs from "./components/main/Blogs";
+import Contact from "./components/main/Contact";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Klinikalarımız" element={<Hospitals />} />
           <Route path="/Apteklərimiz" element={<Pharmacy />} />
           <Route path="/Bloglar" element={<Blogs />} />
+          <Route path="/Əlaqə" element={<Contact />} />
         </Route>
       </Routes>
     </>

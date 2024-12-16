@@ -1,6 +1,6 @@
 function BlogCard() {
     return (
-        <div className="bg-white rounded-[12px] h-[552px] py-[16px] pt-[24px] pb-[28px] flex flex-col items-center">
+        <div className="bg-white rounded-[12px] min-h-[552px] py-[16px] pt-[24px] pb-[28px] flex flex-col items-center">
             <img src="/assets/images/blog.jpg" alt="doctor" className=" px-5 w-full" />
             <div className='flex flex-col items-center pt-3 w-full px-5'>
                 <div className="flex items-center justify-between w-full font-medium text-xs sm:text-sm md:text-base">

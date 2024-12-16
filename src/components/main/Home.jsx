@@ -31,6 +31,7 @@ function Home() {
                             className="flex transition-transform duration-500"
                             style={{ transform: `translateX(-${currentSlide * 180}px)` }}
                         >
+                    
                             {Array.from({ length: 8 }).map((_, index) => (
                                 <div className="!w-[180px] relative" key={index}>
                                     <div>
