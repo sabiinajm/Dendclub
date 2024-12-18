@@ -1,8 +1,9 @@
+import { Rate } from "antd"
 import DrCard from "./DrCard"
 
 function HospitalDetails() {
     return (
-        <main className="bg-[#f2f5f8]">
+        <main className="bg-[#f2f5f8] pb-[80px]">
             <div className="max-w-[1224px] mx-auto px-2">
                 <div className=" flex w-full justify-end items-center gap-3 h-[95px]">
                     <div className="h-[44px] w-[44px] rounded-full bg-[#0D9CD8] flex justify-center items-center">
@@ -126,7 +127,7 @@ function HospitalDetails() {
                     </div>
                 </div>
                 <h3 className="text-[#2C2C2E] pb-[22px] text-[1.1rem] font-medium md:text-[2rem]">Həkimlərimiz</h3>
-                <div className="flex items-center gap-4 pb-[54px]">
+                <div className="flex items-center flex-wrap gap-4 pb-[54px]">
                     <div className="relative w-[250px] md:w-[500px]">
                         <input type="text" placeholder="Axtarın " className="w-[250px] md:w-[500px] bg-white py-[15px] rounded-[16px] pl-4 placeholder:text-[#636366]" />
                         <div className="absolute bottom-[6px] flex justify-center items-center right-[7px] h-[42px] w-[42px] rounded-[12px] bg-[#0D9CD8]">
@@ -136,7 +137,7 @@ function HospitalDetails() {
                             </svg>
                         </div>
                     </div>
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 flex-wrap">
                         <div className="relative w-[136px]">
                             <select className="w-full pl-[20px]  h-[48px] rounded-[12px] bg-white outline-none appearance-none pr-10">
                                 <option value="">Sahələr</option>
@@ -189,6 +190,63 @@ function HospitalDetails() {
                     {Array.from({ length: 20 }).map((_, index) => (
                         <DrCard key={index} />
                     ))}
+                </div>
+                <div className="w-full min-h-[728px] p-[25px] rounded-[12px] bg-white border border-[#D1D1D6]">
+                    <div className="flex gap-4 pb-[10px] mb-[35px] border-b">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M8 19.9997H28M28 25.333H8M20 14.6663H28M28 9.33301H20M12 11.9997H13.3333C13.597 11.9997 13.8548 12.0779 14.0741 12.2244C14.2934 12.3709 14.4643 12.5791 14.5652 12.8228C14.6661 13.0664 14.6925 13.3345 14.641 13.5931C14.5896 13.8518 14.4626 14.0893 14.2761 14.2758C14.0897 14.4623 13.8521 14.5893 13.5935 14.6407C13.3348 14.6922 13.0667 14.6658 12.8231 14.5648C12.5795 14.4639 12.3712 14.293 12.2247 14.0738C12.0782 13.8545 12 13.5967 12 13.333V9.99967C12 9.29243 12.281 8.61415 12.781 8.11406C13.2811 7.61396 13.9594 7.33301 14.6667 7.33301M4 11.9997H5.33333C5.59704 11.9997 5.85483 12.0779 6.07409 12.2244C6.29336 12.3709 6.46426 12.5791 6.56517 12.8228C6.66609 13.0664 6.69249 13.3345 6.64105 13.5931C6.5896 13.8518 6.46261 14.0893 6.27614 14.2758C6.08967 14.4623 5.8521 14.5893 5.59345 14.6407C5.33481 14.6922 5.06672 14.6658 4.82309 14.5648C4.57945 14.4639 4.37122 14.293 4.22471 14.0738C4.0782 13.8545 4 13.5967 4 13.333V9.99967C4 9.29243 4.28095 8.61415 4.78105 8.11406C5.28115 7.61396 5.95942 7.33301 6.66667 7.33301" stroke="#0D9CD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <h2 className="text-[#2C2C2E] text-[1rem] sm:text-[1.5rem] font-medium">Geridönüşlər</h2>
+                    </div>
+                    <div className="text-[#64717C] pb-[20px]">
+                        <p>12 Rəy</p>
+                    </div>
+                    <div className="flex items-center justify-between text-[1.25rem] pb-[32px] text-[#2C2C2E]">
+                        <h4>Fikirlərini paylaş</h4>
+                        <div className='flex items-center justify-center'>
+                            <Rate style={{ color: '#F4B814' }} className='py-3' />
+                            <p className='text-sm px-2 text-[#636366]'>(4)</p>
+                        </div>
+                    </div>
+                    <div className="flex justify-between w-full flex-wrap sm:flex-nowrap gap-4 mb-[48px]">
+                        <input type="text" placeholder="Fikirlərinizi paylaşın" className="w-[90%] h-[44px] placeholder:text-[#D1D1D6] pl-[16px] border border-[#D1D1D6] rounded-[16px]" />
+                        <button className="rounded-[8px] bg-[#0D9CD8] text-white w-[110px] h-[44px]">Paylaş</button>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <div>
+                            <div className="flex gap-2">
+                                <div className="bg-[#52B6ED] text-[#fff] w-[40px] h-[40px] rounded-full flex justify-center items-center">
+                                    D A
+                                </div>
+                                <div>
+                                    <h5 className="text-[#2C2C2E] font-medium">Dəniz Aydın</h5>
+                                    <p className="text-[#64717C] text-[.75rem]">12 Avqust 2024</p>
+                                </div>
+                            </div>
+                            <div className='flex items-center'>
+                                <Rate style={{ color: '#F4B814' }} className='py-3' />
+                                <p className='text-sm px-2 text-[#636366]'>(4)</p>
+                            </div>
+                            <p className="text-[#64717C] pb-[50px]">Lorem ipsum dolor sit amet consectetur. Turpis semper vitae tellus netus. Consequat neque felis consectetur egestas porttitor integer adipiscing. Massa etiam fusce a cursus netus lectus. Tellus eget rhoncus vel dolor leo. In vel mi facilisis amet morbi dui purus nulla purus.  <span className="font-medium underline">Daha çox</span></p>
+                        </div>
+                        <div>
+                            <div className="flex gap-2">
+                                <div className="bg-[#52B6ED] text-[#fff] w-[40px] h-[40px] rounded-full flex justify-center items-center">
+                                    D A
+                                </div>
+                                <div>
+                                    <h5 className="text-[#2C2C2E] font-medium">Dəniz Aydın</h5>
+                                    <p className="text-[#64717C] text-[.75rem]">12 Avqust 2024</p>
+                                </div>
+                            </div>
+                            <div className='flex items-center'>
+                                <Rate style={{ color: '#F4B814' }} className='py-3' />
+                                <p className='text-sm px-2 text-[#636366]'>(4)</p>
+                            </div>
+                            <p className="text-[#64717C] pb-[50px]">Lorem ipsum dolor sit amet consectetur. Turpis semper vitae tellus netus. Consequat neque felis consectetur egestas porttitor integer adipiscing. Massa etiam fusce a cursus netus lectus. Tellus eget rhoncus vel dolor leo. In vel mi facilisis amet morbi dui purus nulla purus. <span className="font-medium underline">Daha çox</span></p>
+                        </div>
+                    </div>
+                    <h3 className="text-center font-medium pb-[32px]">Daha çox</h3>
                 </div>
             </div>
         </main>
