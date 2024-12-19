@@ -1,11 +1,15 @@
-function BlogCard() {
+import { Link } from "react-router-dom"
+
+function BlogCard({key}) {
     return (
-        <div className="bg-white rounded-[12px] min-h-[552px] py-[16px] pt-[24px] pb-[28px] flex flex-col items-center">
-            <img src="/assets/images/blog.jpg" alt="doctor" className=" px-5 w-full" />
+        <Link to={`/Bloglar/${key}`} className="bg-white rounded-[12px] min-h-[552px] py-[16px] pt-[24px] pb-[28px] flex flex-col items-center">
+            <div className="mx-5 ">
+                <img src="/assets/images/blog.jpeg" alt="doctor" className="w-full rounded-[12px]" />
+            </div>
             <div className='flex flex-col items-center pt-3 w-full px-5'>
                 <div className="flex items-center justify-between w-full font-medium text-xs sm:text-sm md:text-base">
-                    <div className="flex items-center gap-2">
-                        <img src="/assets/images/ava.png" className="h-[40px] w-[40px]" alt="" />
+                    <div className="flex items-center justify-center gap-2">
+                        <img src="/assets/images/ava.jpeg" className="h-[40px] w-[40px] object-[90%] object-cover rounded-full" alt="" />
                         <h4 className=" text-[#2C2C2E]">Dr.Ayaz Əliyev</h4>
                     </div>
                     <p className="text-[#64717C]">Uşaq Sağlığı</p>
@@ -18,7 +22,7 @@ function BlogCard() {
                     <p className="text-[#2C2C2E]">Ətraflı bax</p>
                 </div>
             </div>
-        </div >
+        </Link >
     )
 }
 export default BlogCard

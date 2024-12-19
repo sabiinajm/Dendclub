@@ -10,6 +10,7 @@ import Contact from "./components/main/Contact";
 import HospitalDetails from "./components/main/HospitalDetails";
 import PharmacyDetails from "./components/main/PharmacyDetails";
 import DoctorsDetails from "./components/main/DoctorsDetails";
+import BlogDetails from "./components/main/BlogDetails";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/Apteklərimiz" element={<Pharmacy />} />
           <Route path="/Apteklərimiz/:id" element={<PharmacyDetails />} />
           <Route path="/Bloglar" element={<Blogs />} />
+          <Route path="/Bloglar/:id" element={<BlogDetails />} />
           <Route path="/Əlaqə" element={<Contact />} />
         </Route>
       </Routes>

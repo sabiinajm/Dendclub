@@ -389,7 +389,7 @@ function DoctorsDetails() {
                                             </svg>
                                             <h2 className="text-[#2C2C2E] font-medium pl-2 text-[.9rem] sm:text-[1.25rem]">Geridönüşlər</h2>
                                         </div>
-                                        <div className="text-[#64717C] pb-[20px]">
+                                        <div className="text-[#64717C] pb-[20px] pt-[35px]">
                                             <p>12 Rəy</p>
                                         </div>
                                         <div className="flex items-center justify-between text-[1.25rem] pb-[32px] text-[#2C2C2E]">

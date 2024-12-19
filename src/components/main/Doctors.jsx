@@ -87,7 +87,7 @@ function Doctors() {
                 </div>
                 <h1 className="pt-[7rem] pb-[4rem] text-[#030303] text-2xl md:text-[2.5rem] leading-[56px] text-center">Peşəkar Həkimlərimiz</h1>
                 <div className="pt-[45px] pb-[56px]">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
                         {Array.from({ length: 20 }).map((_, index) => (
                             <DrCard key={index} />
                         ))}

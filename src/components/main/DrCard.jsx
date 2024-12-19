@@ -2,9 +2,9 @@ import { Rate } from 'antd';
 import { Link } from 'react-router-dom';
 function DrCard({key}) {
     return (
-        <div className="bg-white rounded-[12px] min-h-[433px] w-[288px] py-[16px] pt-[12px] pb-[28px] flex flex-col items-center">
-            <div className="bg-[#F2F5F8] relative h-[203px] w-[256px] flex justify-center items-end rounded-[12px]">
-                <img src="/assets/images/drAylin.png" alt="doctor" className="w-[184px] h-[184px]" />
+        <div className="bg-white rounded-[12px] min-h-[433px] w-full xs:w-[288px] py-[16px] pt-[12px] pb-[28px] flex flex-col items-center">
+            <div className="bg-[#F2F5F8] relative h-[203px] w-[90%] xs:w-[256px] flex justify-center items-end rounded-[12px]">
+                <img src="/assets/images/drAylin.png" alt="doctor" className="w-[full] xs:w-[184px] h-[184px]" />
                 <div className='w-[190px] absolute flex justify-center items-center bottom-[-20px] h-[40px] bg-[#0D9CD8] text-white rounded-[24px] text-base'>
                     <h1>Dr.Aylin Əliyev</h1>
                 </div>
@@ -16,15 +16,15 @@ function DrCard({key}) {
             </div>
             <div className='flex flex-col items-center pt-[28px]'>
                 <h3>Uzman Psixoloq</h3>
-                <div className='w-[256px]'>
+                <div className='w-full xs:w-[256px]'>
                     <div className='flex items-center justify-center'>
                         <Rate style={{ color: '#F4B814' }} className='py-3' />
                         <p className='text-sm px-2 text-[#636366]'>(4)</p>
                     </div>
                     <p className='text-[#636366] text-[.75rem] text-center'>Lorem ipsum dolor sit amet lorem ipsum ipsum lorem ipsum dolor sit at</p>
-                    <div className='flex justify-between py-[28px]'>
-                        <Link to={`/Həkimlərimiz/${key + 1}`} className='w-[120px] h-[40px] bg-[#F0F0F7] rounded-[8px] text-[#2C2C2E] flex justify-center items-center transition-all duration-300 hover:bg-[#d4d4db]'>Ətraflı bax</Link>
-                        <Link className='w-[120px] h-[40px] bg-[#0D9CD8] hover:bg-[#0a7bab] rounded-[8px] text-white flex justify-center items-center transition-all duration-150'>Növbə götür</Link>
+                    <div className='flex justify-between py-[28px] px-[10px] gap-2 xs:gap-0 xs:px-0'>
+                        <Link to={`/Həkimlərimiz/${key + 1}`} className='w-[90%] xs:w-[120px] h-[40px] bg-[#F0F0F7] rounded-[8px] text-[#2C2C2E] flex justify-center items-center transition-all duration-300 hover:bg-[#d4d4db]'>Ətraflı bax</Link>
+                        <Link className='w-[90%] xs:w-[120px] h-[40px] bg-[#0D9CD8] hover:bg-[#0a7bab] rounded-[8px] text-white flex justify-center items-center transition-all duration-150'>Növbə götür</Link>
                     </div>
                 </div>
             </div>
