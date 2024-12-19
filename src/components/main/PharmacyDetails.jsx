@@ -1,63 +1,29 @@
 import { Rate } from "antd"
-import DrCard from "./DrCard"
 
-function HospitalDetails() {
+function PharmacyDetails() {
     return (
         <main className="bg-[#f2f5f8] pb-[80px]">
             <div className="max-w-[1224px] mx-auto px-2">
-                <div className=" flex w-full justify-end items-center gap-3 h-[95px]">
-                    <div className="h-[44px] w-[44px] rounded-full bg-[#0D9CD8] flex justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M10 -0.00195312C15.523 -0.00195312 20 4.47505 20 9.99805C20 15.521 15.523 19.998 10 19.998C8.404 20.0002 6.83083 19.6189 5.41301 18.886L1.58701 19.953C1.37355 20.0126 1.14809 20.0144 0.933732 19.9581C0.719374 19.9019 0.523824 19.7896 0.367118 19.6329C0.210412 19.4762 0.0981849 19.2807 0.0419355 19.0663C-0.0143139 18.852 -0.0125631 18.6265 0.0470083 18.413L1.11501 14.59C0.38036 13.171 -0.0020688 11.596 8.41695e-06 9.99805C8.41695e-06 4.47505 4.47701 -0.00195312 10 -0.00195312ZM10 1.49805C7.74567 1.49805 5.58366 2.39358 3.9896 3.98764C2.39554 5.5817 1.50001 7.74371 1.50001 9.99805C1.50001 11.468 1.87301 12.881 2.57301 14.135L2.72301 14.405L1.61101 18.389L5.59801 17.277L5.86801 17.427C7.00239 18.0577 8.26614 18.4203 9.56236 18.4869C10.8586 18.5534 12.1528 18.3223 13.3458 17.8111C14.5389 17.3 15.599 16.5224 16.445 15.5381C17.2909 14.5537 17.9002 13.3887 18.2261 12.1323C18.552 10.876 18.5858 9.56169 18.325 8.29024C18.0643 7.01878 17.5158 5.82393 16.7216 4.79731C15.9275 3.77069 14.9088 2.93957 13.7437 2.36767C12.5786 1.79577 11.2979 1.4983 10 1.49805ZM6.75001 10.998H11.248C11.438 10.9981 11.6209 11.0703 11.7598 11.2C11.8987 11.3297 11.9831 11.5073 11.996 11.6969C12.009 11.8865 11.9495 12.0739 11.8296 12.2213C11.7097 12.3688 11.5383 12.4651 11.35 12.491L11.248 12.498H6.75001C6.55999 12.498 6.37707 12.4258 6.23822 12.2961C6.09937 12.1663 6.01493 11.9887 6.00198 11.7992C5.98903 11.6096 6.04852 11.4222 6.16844 11.2747C6.28836 11.1273 6.45976 11.0309 6.64801 11.005L6.75001 10.998ZM6.75001 7.49805H13.255C13.4449 7.49836 13.6277 7.57072 13.7664 7.70053C13.905 7.83034 13.9893 8.00792 14.0021 8.19742C14.0149 8.38693 13.9553 8.57424 13.8354 8.72154C13.7155 8.86884 13.5442 8.96516 13.356 8.99105L13.255 8.99805H6.75001C6.55999 8.99799 6.37707 8.9258 6.23822 8.79607C6.09937 8.66635 6.01493 8.48875 6.00198 8.29917C5.98903 8.10958 6.04852 7.92215 6.16844 7.77475C6.28836 7.62734 6.45976 7.53095 6.64801 7.50505L6.75001 7.49805Z" fill="white" />
-                        </svg>
-                    </div>
-                    <div className="h-[44px] w-[44px] rounded-full bg-[#0D9CD8] flex justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-                            <path d="M23.2261 14.9056L14.4761 23.5716L5.7261 14.9056C5.14896 14.344 4.69435 13.6689 4.39091 12.923C4.08746 12.177 3.94176 11.3764 3.96296 10.5713C3.98417 9.76631 4.17182 8.9744 4.51412 8.24547C4.85641 7.51654 5.34592 6.86637 5.95183 6.33592C6.55774 5.80547 7.26692 5.40621 8.03471 5.1633C8.8025 4.9204 9.61227 4.83909 10.413 4.92451C11.2138 5.00993 11.9882 5.26023 12.6875 5.65963C13.3867 6.05904 13.9957 6.59891 14.4761 7.24524C14.9586 6.6036 15.5683 6.06845 16.267 5.67328C16.9658 5.27811 17.7387 5.03143 18.5372 4.94868C19.3357 4.86593 20.1427 4.94889 20.9077 5.19237C21.6726 5.43584 22.3791 5.8346 22.9829 6.36367C23.5867 6.89274 24.0748 7.54074 24.4166 8.26712C24.7584 8.99349 24.9466 9.78261 24.9695 10.5851C24.9923 11.3875 24.8492 12.1861 24.5493 12.9307C24.2493 13.6753 23.7988 14.35 23.2261 14.9126" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                <div className="flex items-center">
+                    <h1 className="text-center flex-1 text-[#2C2C2E] text-[1.7rem] py-[53px] sm:text-[2.5rem] font-medium">Kanon Aptek</h1>
+                    <div className=" flex justify-end items-center gap-3 h-[95px]">
+                        <div className="h-[44px] w-[44px] rounded-full bg-[#0D9CD8] flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 -0.00195312C15.523 -0.00195312 20 4.47505 20 9.99805C20 15.521 15.523 19.998 10 19.998C8.404 20.0002 6.83083 19.6189 5.41301 18.886L1.58701 19.953C1.37355 20.0126 1.14809 20.0144 0.933732 19.9581C0.719374 19.9019 0.523824 19.7896 0.367118 19.6329C0.210412 19.4762 0.0981849 19.2807 0.0419355 19.0663C-0.0143139 18.852 -0.0125631 18.6265 0.0470083 18.413L1.11501 14.59C0.38036 13.171 -0.0020688 11.596 8.41695e-06 9.99805C8.41695e-06 4.47505 4.47701 -0.00195312 10 -0.00195312ZM10 1.49805C7.74567 1.49805 5.58366 2.39358 3.9896 3.98764C2.39554 5.5817 1.50001 7.74371 1.50001 9.99805C1.50001 11.468 1.87301 12.881 2.57301 14.135L2.72301 14.405L1.61101 18.389L5.59801 17.277L5.86801 17.427C7.00239 18.0577 8.26614 18.4203 9.56236 18.4869C10.8586 18.5534 12.1528 18.3223 13.3458 17.8111C14.5389 17.3 15.599 16.5224 16.445 15.5381C17.2909 14.5537 17.9002 13.3887 18.2261 12.1323C18.552 10.876 18.5858 9.56169 18.325 8.29024C18.0643 7.01878 17.5158 5.82393 16.7216 4.79731C15.9275 3.77069 14.9088 2.93957 13.7437 2.36767C12.5786 1.79577 11.2979 1.4983 10 1.49805ZM6.75001 10.998H11.248C11.438 10.9981 11.6209 11.0703 11.7598 11.2C11.8987 11.3297 11.9831 11.5073 11.996 11.6969C12.009 11.8865 11.9495 12.0739 11.8296 12.2213C11.7097 12.3688 11.5383 12.4651 11.35 12.491L11.248 12.498H6.75001C6.55999 12.498 6.37707 12.4258 6.23822 12.2961C6.09937 12.1663 6.01493 11.9887 6.00198 11.7992C5.98903 11.6096 6.04852 11.4222 6.16844 11.2747C6.28836 11.1273 6.45976 11.0309 6.64801 11.005L6.75001 10.998ZM6.75001 7.49805H13.255C13.4449 7.49836 13.6277 7.57072 13.7664 7.70053C13.905 7.83034 13.9893 8.00792 14.0021 8.19742C14.0149 8.38693 13.9553 8.57424 13.8354 8.72154C13.7155 8.86884 13.5442 8.96516 13.356 8.99105L13.255 8.99805H6.75001C6.55999 8.99799 6.37707 8.9258 6.23822 8.79607C6.09937 8.66635 6.01493 8.48875 6.00198 8.29917C5.98903 8.10958 6.04852 7.92215 6.16844 7.77475C6.28836 7.62734 6.45976 7.53095 6.64801 7.50505L6.75001 7.49805Z" fill="white" />
+                            </svg>
+                        </div>
+                        <div className="h-[44px] w-[44px] rounded-full bg-[#0D9CD8] flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                                <path d="M23.2261 14.9056L14.4761 23.5716L5.7261 14.9056C5.14896 14.344 4.69435 13.6689 4.39091 12.923C4.08746 12.177 3.94176 11.3764 3.96296 10.5713C3.98417 9.76631 4.17182 8.9744 4.51412 8.24547C4.85641 7.51654 5.34592 6.86637 5.95183 6.33592C6.55774 5.80547 7.26692 5.40621 8.03471 5.1633C8.8025 4.9204 9.61227 4.83909 10.413 4.92451C11.2138 5.00993 11.9882 5.26023 12.6875 5.65963C13.3867 6.05904 13.9957 6.59891 14.4761 7.24524C14.9586 6.6036 15.5683 6.06845 16.267 5.67328C16.9658 5.27811 17.7387 5.03143 18.5372 4.94868C19.3357 4.86593 20.1427 4.94889 20.9077 5.19237C21.6726 5.43584 22.3791 5.8346 22.9829 6.36367C23.5867 6.89274 24.0748 7.54074 24.4166 8.26712C24.7584 8.99349 24.9466 9.78261 24.9695 10.5851C24.9923 11.3875 24.8492 12.1861 24.5493 12.9307C24.2493 13.6753 23.7988 14.35 23.2261 14.9126" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
-                <div className="flex flex-col lg:flex-row justify-between w-full gap-9 pb-[80px]">
-                    <div>
-                        <h1 className="text-[1.3rem] pb-[13px] md:text-[2.5rem] text-[#2C2C2E] font-medium">İstanbul NS Klinika </h1>
-                        <p className="text-[1rem] md:text-[1.5rem] text-[#64717C]">İstanbul Ns Klinikası Azərbaycanda yüksək səviyyəli tibbi xidmətlər təklif edən tanınmış bir klinikadır. Klinika, müasir tibbi texnologiyalar və avadanlıqlarla təchiz olunub və geniş ixtisaslaşmış həkim heyəti ilə çalışır. İstanbul Ns Klinikasında nevrologiya, endokrinologiya, kardiologiya, stomatologiya və digər sahələr üzrə ixtisaslı mütəxəssislər fəaliyyət göstərir. Klinika, həmçinin xəstələrinə rahat və təhlükəsiz şərait təmin edən peşəkar və mehriban heyəti ilə seçilir. Klinikanın məqsədi xəstələrə keyfiyyətli və əlçatan tibbi yardım göstərməklə sağlamlığına qayğı göstərməkdir.</p>
-                    </div>
-                    <img className="object-cover h-[506px] w-[566px] rounded-[20px]" src="/assets/images/klinika2.jpg" alt="" />
-                </div>
-                <div>
-                    <h3 className="text-[#2C2C2E] text-[1.1rem] font-medium md:text-[2rem]">Ünvan</h3>
-                    <p className="text-[#64717C] md:text-xl pb-[32px]">Bakı,Süleyman Rüstəmov küçəsi</p>
-                </div>
+                <img src="/assets/images/aptek.png" className="w-full h-[640px] object-cover rounded-[20px]" alt="" />
+                <h2 className="pt-[53px] text-[2rem] text-[#2C2C2E] font-medium">Ünvan</h2>
+                <p className="text-[#64717C]">Bakı,Süleyman Rüstəmov küçəsi</p>
                 <iframe className="w-full rounded-[12px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d384.7404828742046!2d49.88072826669062!3d40.39405115027642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d3081f19f11%3A0x1017bf5178c72b52!2sN%C9%99sir%20Aptek!5e0!3m2!1sen!2saz!4v1734374107520!5m2!1sen!2saz" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div className="py-[80px]">
-                    <h3 className="text-[#222B45] border-b border-[#999] mb-[32px] text-[1.1rem] font-medium md:text-[2rem]">Xidmətlər</h3>
-                    <ul className="text-[.8rem] sm:text-base grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] md:gap-[80px] pl-5 list-disc text-[#2C2C2E] marker:text-[#0D9CD8]">
-                        <div className="flex flex-col gap-3">
-                            {Array.from({ length: 8 }).map((_, index) => (
-                                <li key={`item1-${index}`}>Ailə terapiyası</li>
-                            ))}
-                        </div>
-
-                        <div className="flex flex-col gap-3 whitespace-nowrap">
-                            {Array.from({ length: 8 }).map((_, index) => (
-                                <li key={`item2-${index}`}>Ailədaxili Ünsiyyət Problemləri</li>
-                            ))}
-                        </div>
-
-                        <div className="flex flex-col gap-3 xl:items-end">
-                            {Array.from({ length: 8 }).map((_, index) => (
-                                <li key={`item3-${index}`}>Ailə terapiyası</li>
-                            ))}
-                        </div>
-                        <div className="flex flex-col gap-3 xl:items-end">
-                            {Array.from({ length: 8 }).map((_, index) => (
-                                <li key={`item3-${index}`}>Ailə terapiyası</li>
-                            ))}
-                        </div>
-                    </ul>
-
-                </div>
-                <div className="pb-[80px]">
                     <h3 className="text-[#222B45] pb-[22px] text-[1.1rem] font-medium md:text-[2rem]">Əlaqə</h3>
                     <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
                         <div className="flex flex-col sm:flex-row gap-6">
@@ -126,71 +92,6 @@ function HospitalDetails() {
                         </div>
                     </div>
                 </div>
-                <h3 className="text-[#2C2C2E] pb-[22px] text-[1.1rem] font-medium md:text-[2rem]">Həkimlərimiz</h3>
-                <div className="flex items-center flex-wrap gap-4 pb-[54px]">
-                    <div className="relative w-[250px] md:w-[500px]">
-                        <input type="text" placeholder="Axtarın " className="w-[250px] md:w-[500px] bg-white py-[15px] rounded-[16px] pl-4 placeholder:text-[#636366]" />
-                        <div className="absolute bottom-[6px] flex justify-center items-center right-[7px] h-[42px] w-[42px] rounded-[12px] bg-[#0D9CD8]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M21.0004 20.9999L16.6504 16.6499" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div className="flex gap-3 flex-wrap">
-                        <div className="relative w-[136px]">
-                            <select className="w-full pl-[20px]  h-[48px] rounded-[12px] bg-white outline-none appearance-none pr-10">
-                                <option value="">Sahələr</option>
-                            </select>
-                            <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M6 9L12 15L18 9"
-                                        stroke="#2C2C2E"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                </svg>
-                            </div>
-                        </div>
-
-                        <div className="relative w-[209px]">
-                            <select className="w-full h-[48px] pl-[20px] rounded-[12px] bg-white outline-none appearance-none pr-10">
-                                <option value="">Şəhər və rayon</option>
-                            </select>
-                            <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M6 9L12 15L18 9"
-                                        stroke="#2C2C2E"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                </svg>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div className="grid grid-cols-1 pb-[80px] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-                    {Array.from({ length: 20 }).map((_, index) => (
-                        <DrCard key={index} />
-                    ))}
-                </div>
                 <div className="w-full min-h-[728px] p-[25px] rounded-[12px] bg-white border border-[#D1D1D6]">
                     <div className="flex gap-4 pb-[10px] mb-[35px] border-b">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -252,4 +153,4 @@ function HospitalDetails() {
         </main>
     )
 }
-export default HospitalDetails
+export default PharmacyDetails
