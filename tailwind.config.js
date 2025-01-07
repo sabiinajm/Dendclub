@@ -13,6 +13,7 @@ export default {
         'xxs': '350px',
         'xs': '450px',
         'sm': '550px',
+        'xll': '1120px',
       },
     },
   },

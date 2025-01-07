@@ -24,9 +24,21 @@ function Doctors() {
 
 
     return (
-        <main className="bg-[#f2f5f8]  pt-[24px]">
+        <main className="bg-[#f2f5f8]  pt-[34px]">
             <div className="max-w-[1224px] px-2 xl:px-0 mx-auto">
-                <div className={`relative overflow-x-hidden`}>
+                <h1 className="text-[#030303] text-2xl md:text-[2.5rem] leading-[56px] text-center">Peşəkar Həkimlərimiz</h1>
+                <div className="py-[32px] flex items-center justify-center">
+                    <div className="relative">
+                        <input type="text" placeholder="Axtarın " className="w-[250px] md:min-w-[713px] bg-white py-[15px] rounded-[16px] pl-4 placeholder:text-[#636366]" />
+                        <div className="absolute bottom-[6px] flex justify-center items-center right-[7px] h-[42px] w-[42px] rounded-full bg-[#0D9CD8]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M21.0004 20.9999L16.6504 16.6499" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div className={`relative overflow-x-hidden pb-[49px]`}>
                     {/* Swiper wrapper */}
                     <div className="flex justify-between items-center ">
                         {/* Slides Container */}
@@ -85,8 +97,7 @@ function Doctors() {
                         </svg>
                     </div>
                 </div>
-                <h1 className="pt-[7rem] pb-[4rem] text-[#030303] text-2xl md:text-[2.5rem] leading-[56px] text-center">Peşəkar Həkimlərimiz</h1>
-                <div className="pt-[45px] pb-[56px]">
+                <div className=" pb-[56px]">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
                         {Array.from({ length: 20 }).map((_, index) => (
                             <DrCard key={index} />

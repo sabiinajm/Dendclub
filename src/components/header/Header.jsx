@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { HiOutlineBars3BottomRight } from "react-icons/hi2"
 import { IoCloseOutline } from "react-icons/io5"
+import { RiRadioButtonLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
 
 function Header() {
@@ -9,10 +10,10 @@ function Header() {
         setShowMenu(!showMenu)
     }
     return (
-        <header className="min-h-[225px] bg-white">
+        <header className="min-h-[131px] bg-white">
             <div
-                className="min-h-[112px] max-w-[1224px] mx-auto py-4 flex justify-between items-center px-2 border-b-[1px] border-[#F3F2F8]">
-                <img className="h-[112px]" src="/assets/images/logo.png" alt="Medclub Logo" />
+                className="min-h-[112px] max-w-[1224px] mx-auto py-4 flex justify-between items-center ">
+                <img className="h-[112px] w-[240px] object-cover" src="/assets/images/logo.png" alt="Medclub Logo" />
                 <nav className={`justify-center gap-6 lg:justify-between flex-col lg:flex-row fixed lg:static top-0 right-0 bg-[#fff] z-50 h-screen lg:h-auto shadow-lg lg:shadow-none items-center list-none flex overflow-hidden min-w-[320px] lg:w-[677px] ${showMenu ? 'translate-x-0' : 'translate-x-[400px] lg:translate-x-0'} transition-all duration-400`}>
                     <IoCloseOutline onClick={toggleMenu} className="absolute top-[55px] right-[10px] text-4xl hover:scale-125 transition-all cursor-pointer duration-160 hover:text-[#0D9CD8] lg:hidden" />
                     <li className="active border-b-2 border-[#0D9CD8] whitespace-nowrap"><Link to="/">Ana səhifə</Link></li>
@@ -23,11 +24,15 @@ function Header() {
                     <li><Link to={'/Bloglar'}>Bloglar</Link></li>
                     <li><Link to={'/Əlaqə'}>Əlaqə</Link></li>
                 </nav>
-                <div className="flex items-center w-[181px] justify-between">
-                    <select name="" id="" className="cursor-pointer">
+                <Link to={'/Çat'} className="rounded-full absolute xl:static top-[100px] right-[10px] flex justify-center xl:w-[145px] p-[8px] bg-[#0D9CD8] text-white xl:rounded-[12px]">
+                    <RiRadioButtonLine className="xl:hidden" />
+                    <p className="hidden xl:flex"> Canlı çat</p>
+                </Link>
+                <div className="flex items-center w-[121px] justify-between">
+                    {/* <select name="" id="" className="cursor-pointer">
                         <option value="">Az</option>
                         <option value="">Ru</option>
-                    </select>
+                    </select> */}
                     <div className="relative cursor-pointer w-[40px] h-[40px] flex justify-center items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <g clipPath="url(#clip0_560_310)">
@@ -58,7 +63,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <div className="h-[48px] w-[90%] sm:w-[500px] relative mx-auto my-4">
+            {/* <div className="h-[48px] w-[90%] sm:w-[500px] relative mx-auto my-4">
                 <input type="text" placeholder="Axtarın"
                     className="w-full  h-full pl-3 border border-[#D1D1D6] placeholder-[#D1D1D6] rounded-[16px]" />
                 <button
@@ -69,7 +74,7 @@ function Header() {
                             strokeLinejoin="round" />
                     </svg>
                 </button>
-            </div>
+            </div> */}
         </header>
     )
 }

@@ -4,29 +4,28 @@ import DrCard from "./DrCard";
 function Home() {
     const [isAtStart, setIsAtStart] = useState(true);
     const [isAtEnd, setIsAtEnd] = useState(false);
-    const [openIndex, setOpenIndex] = useState(null);
-    const swiperRef = useRef(null);
-    const [currentSlide, setCurrentSlide] = useState(0);
+    // const [openIndex, setOpenIndex] = useState(null);
+    // const swiperRef = useRef(null);
+    // const [currentSlide, setCurrentSlide] = useState(0);
 
-    const handleSlideChange = (direction) => {
-        const newSlide = direction === 'next' ? currentSlide + 1 : currentSlide - 1;
-        setCurrentSlide(newSlide);
-        setIsAtStart(newSlide === 0);
-        setIsAtEnd(newSlide === 7);
+    // const handleSlideChange = (direction) => {
+    //     const newSlide = direction === 'next' ? currentSlide + 1 : currentSlide - 1;
+    //     setCurrentSlide(newSlide);
+    //     setIsAtStart(newSlide === 0);
+    //     setIsAtEnd(newSlide === 7);
 
-    };
+    // };
 
-    const handleDropdownToggle = (index) => {
-        setOpenIndex(openIndex === index ? null : index);
-    };
+    // const handleDropdownToggle = (index) => {
+    //     setOpenIndex(openIndex === index ? null : index);
+    // };
 
     return (
-        <main className="bg-[#f2f5f8]  pt-[24px]">
+        <main className="bg-[#f2f5f8]  pt-[34px]">
             <div className="max-w-[1224px] px-2 xl:px-0 mx-auto">
-                <div className={`relative overflow-x-hidden`}>
-                    {/* Swiper wrapper */}
-                    <div className="flex justify-between items-center ">
-                        {/* Slides Container */}
+                {/* <div className={`relative overflow-x-hidden`}> */}
+                {/* Swiper wrapper */}
+                {/* <div className="flex justify-between items-center ">
                         <div
                             className="flex transition-transform duration-500"
                             style={{ transform: `translateX(-${currentSlide * 180}px)` }}
@@ -63,10 +62,10 @@ function Home() {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
 
-                    {/* Custom Navigation Buttons */}
-                    <div
+                {/* Custom Navigation Buttons */}
+                {/* <div
                         className={`custom-button-prev absolute top-[25px] left-0 transform -translate-y-[50%] h-[52px] w-[48px] bg-white rounded-[8px] flex justify-center items-center z-10 transition-all duration-300 ease-in-out ${isAtStart ? 'opacity-0 transform -translate-x-full' : 'opacity-100 transform translate-x-0'}`}
                         onClick={() => handleSlideChange('prev')}
                     >
@@ -82,7 +81,7 @@ function Home() {
                             <path d="M9 18L15 12L9 6" stroke="#3A3B41" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </div>
-                </div>
+                </div> */}
                 <div className="min-h-[340px] flex flex-col md:flex-row justify-between items-end md:items-center pl-0 md:pl-8 pt-[30px] md:pt-0 bg-[#0D9CD8] rounded-[20px] my-[36px] z-10 ">
                     <div className="text-white w-[90%] md:w-[480px]">
                         <h1 className="text-3xl leading-[44px] font-medium pr-8">Sizin Sağlamlığınız üçün Ən Yaxşı Həkimlər!</h1>
