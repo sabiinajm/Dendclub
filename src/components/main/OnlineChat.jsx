@@ -7,7 +7,7 @@ function OnlineChat() {
                 +
             </Link>
             <div className="flex flex-col lg:flex-row gap-[23px]">
-                <div className="bg-white relative p-[15px] sm:p-[50px] my-4 rounded-[12px] lg:w-[462px]">
+                <div className="bg-white relative p-[15px] sm:p-[50px] my-4 rounded-[12px] lg:min-w-[462px]">
                     <h4 className="text-center text-[#2C2C2E] text-xl text-medium">Canlı çat</h4>
                     <input type="text" placeholder="Axtarın " className="px-3 my-[40px] text-[#AEAEB2] w-full border border-[#D1D1D6] rounded-[16px] h-[40px]" />
                     <div className="flex flex-col gap-5 ">
@@ -95,7 +95,7 @@ function OnlineChat() {
                         </div>
                     </div>
                     <div className="relative">
-                        <input type="text" className="bg-[#F7F7F8] mt-[70px] w-full border-[3px] rounded-[15px] p-3 border-[#0D9CD8]" placeholder="Mesajınızı yazın..." />
+                        <input type="text" className="bg-[#F7F7F8] outline-none mt-[70px] w-full border-[3px] rounded-[15px] p-3 border-[#0D9CD8]" placeholder="Mesajınızı yazın..." />
                         <div className="absolute right-3 bottom-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M3 20V4L22 12L3 20ZM5 17L16.85 12L5 7V10.5L11 12L5 13.5V17Z" fill="#AEAEB2" />
