@@ -12,6 +12,7 @@ import PharmacyDetails from "./components/main/PharmacyDetails";
 import DoctorsDetails from "./components/main/DoctorsDetails";
 import BlogDetails from "./components/main/BlogDetails";
 import OnlineChat from "./components/main/OnlineChat";
+import UserProfile from "./components/main/UserProfile";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/Bloglar/:id" element={<BlogDetails />} />
           <Route path="/Əlaqə" element={<Contact />} />
           <Route path="/Çat" element={<OnlineChat />} />
+          <Route path="/Profil" element={<UserProfile />} />
         </Route>
       </Routes>
     </>
