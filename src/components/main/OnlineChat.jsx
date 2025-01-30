@@ -26,8 +26,8 @@ function OnlineChat() {
                                     <div className="flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M10.0003 5.2749V9.99712V5.2749ZM9.89393 10.006H6.83838H9.89393Z" fill="#636366" />
-                                            <path d="M9.9885 16.3862C13.517 16.3862 16.3774 13.5258 16.3774 9.99729C16.3774 6.4688 13.517 3.6084 9.9885 3.6084C6.46001 3.6084 3.59961 6.4688 3.59961 9.99729C3.59961 13.5258 6.46001 16.3862 9.9885 16.3862Z" stroke="#636366" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M10.0003 5.2749V9.99712M9.89393 10.006H6.83838" stroke="#636366" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.9885 16.3862C13.517 16.3862 16.3774 13.5258 16.3774 9.99729C16.3774 6.4688 13.517 3.6084 9.9885 3.6084C6.46001 3.6084 3.59961 6.4688 3.59961 9.99729C3.59961 13.5258 6.46001 16.3862 9.9885 16.3862Z" stroke="#636366" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                                            <path d="M10.0003 5.2749V9.99712M9.89393 10.006H6.83838" stroke="#636366" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                         09:00-17:00
                                     </div>
@@ -52,8 +52,8 @@ function OnlineChat() {
                                     <div className="flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M10.0003 5.2749V9.99712V5.2749ZM9.89393 10.006H6.83838H9.89393Z" fill="#636366" />
-                                            <path d="M9.9885 16.3862C13.517 16.3862 16.3774 13.5258 16.3774 9.99729C16.3774 6.4688 13.517 3.6084 9.9885 3.6084C6.46001 3.6084 3.59961 6.4688 3.59961 9.99729C3.59961 13.5258 6.46001 16.3862 9.9885 16.3862Z" stroke="#636366" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M10.0003 5.2749V9.99712M9.89393 10.006H6.83838" stroke="#636366" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.9885 16.3862C13.517 16.3862 16.3774 13.5258 16.3774 9.99729C16.3774 6.4688 13.517 3.6084 9.9885 3.6084C6.46001 3.6084 3.59961 6.4688 3.59961 9.99729C3.59961 13.5258 6.46001 16.3862 9.9885 16.3862Z" stroke="#636366" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                                            <path d="M10.0003 5.2749V9.99712M9.89393 10.006H6.83838" stroke="#636366" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                         09:00-17:00
                                     </div>
