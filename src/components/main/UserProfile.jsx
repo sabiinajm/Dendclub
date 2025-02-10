@@ -5,7 +5,20 @@ import { Link } from "react-router-dom"
 
 function UserProfile() {
     const options = ["Şəxsi Tibbi Kart", "Növbələrim", "Bəyəndiyim uzmanlar", "Parametrlər", "Bildirişlər"]
-    const [selected, setSelected] = useState(options[0]);
+    const [selected, setSelected] = useState(options[0])
+    const [toggleStates, setToggleStates] = useState({
+        phone1: false,
+        email1: false,
+        phone2: false,
+        email2: false,
+    })
+
+    const handleToggle = (key) => {
+        setToggleStates((prevState) => ({
+            ...prevState,
+            [key]: !prevState[key],
+        }))
+    }
     return (
         <div className="absolute top-0 left-0 px-4 bg-[#F2F5F8] min-h-screen w-full z-[999]">
             <div
@@ -221,8 +234,77 @@ function UserProfile() {
                         </div>
                     )}
                     {selected === "Bildirişlər" && (
-                        <div className="flex ml-5 flex-col justify-start mt-[40px] w-full">
-
+                        <div className="flex ml-5 flex-col justify-start mt-[40px] w-full p-2 text-sm xs:text-base xs:p-0">
+                            <h2>Bildiriş seçimləri</h2>
+                            <p className="text-[#64717C] pt-[24px] pb-[48px]">Medclubdan almaq istədiyiniz bildirişləri seçin və özəlləşdirin</p>
+                            <h2>Növbələrlə bağlı bildirişlər</h2>
+                            <p className="text-[#64717C] py-[24px]">Lorem ipsum dolor sit amet consectetur. Massa enim felis urna libero integer venenatis. Pharetra vel euismod et orci ornare. </p>
+                            <div className="flex w-full justify-between pr-3">
+                                <h2>Telefon : 0705555555</h2>
+                                <div onClick={() => handleToggle("phone1")} className={`w-[54px] h-[32px] ${toggleStates.phone1 ? 'bg-[#34C759] justify-end transition-all duration-200' : 'bg-[#E5E5EA]'} rounded-[16px] flex justify-start items-center px-[3px]`}>
+                                    <div className="w-[28px] h-[28px] bg-white rounded-full flex justify-center items-center">
+                                        {
+                                             toggleStates.phone1 && (
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path d="M3.33301 8.00008L6.66634 11.3334L13.333 4.66675" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            )
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex w-full justify-between pr-3 pt-[16px] pb-[48px]">
+                                <h2>Email   : mmmm@gmail.com</h2>
+                                <div onClick={() => handleToggle("email1")} className={`w-[54px] h-[32px] ${ toggleStates.email1 ? 'bg-[#34C759] justify-end transition-all duration-200' : 'bg-[#E5E5EA]'} rounded-[16px] flex justify-start items-center px-[3px]`}>
+                                    <div className="w-[28px] h-[28px] bg-white rounded-full flex justify-center items-center">
+                                        {
+                                            toggleStates.email1 && (
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path d="M3.33301 8.00008L6.66634 11.3334L13.333 4.66675" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            )
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <h1 className="pb-[16px]">Endirim və kampaniyalarla bağlı bildirişlər</h1>
+                            <p className="text-[#64717C] pb-[48px]">Lorem ipsum dolor sit amet consectetur. Massa enim felis urna libero integer venenatis. Pharetra vel euismod et orci ornare. </p>
+                            <div className="flex w-full justify-between pr-3">
+                                <h2>Telefon : 0705555555</h2>
+                                <div onClick={() => handleToggle("phone2")} className={`w-[54px] h-[32px] ${toggleStates.phone2 ? 'bg-[#34C759] justify-end transition-all duration-200' : 'bg-[#E5E5EA]'} rounded-[16px] flex justify-start items-center px-[3px]`}>
+                                    <div className="w-[28px] h-[28px] bg-white rounded-full flex justify-center items-center">
+                                        {
+                                            toggleStates.phone2 && (
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path d="M3.33301 8.00008L6.66634 11.3334L13.333 4.66675" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            )
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex w-full justify-between pr-3 pt-[16px]">
+                                <h2>Email   : mmmm@gmail.com</h2>
+                                <div onClick={() => handleToggle("email2")} className={`w-[54px] h-[32px] ${toggleStates.email2 ? 'bg-[#34C759] justify-end transition-all duration-200' : 'bg-[#E5E5EA]'} rounded-[16px] flex justify-start items-center px-[3px]`}>
+                                    <div className="w-[28px] h-[28px] bg-white rounded-full flex justify-center items-center">
+                                        {
+                                            toggleStates.email2 && (
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path d="M3.33301 8.00008L6.66634 11.3334L13.333 4.66675" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            )
+                                        }
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     )}
                 </div>
