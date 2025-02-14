@@ -1,11 +1,13 @@
 import { Rate } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoArrowBackOutline } from "react-icons/io5"
 import { Link } from "react-router-dom"
+import { IoCloseOutline } from "react-icons/io5"
 
 function UserProfile() {
     const options = ["Şəxsi Tibbi Kart", "Növbələrim", "Bəyəndiyim uzmanlar", "Parametrlər", "Bildirişlər"]
     const [selected, setSelected] = useState(options[0])
+    const [optMenu, setOptMenu] = useState(true)
     const [toggleStates, setToggleStates] = useState({
         phone1: false,
         email1: false,
@@ -19,6 +21,16 @@ function UserProfile() {
             [key]: !prevState[key],
         }))
     }
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setOptMenu(true);
+            }
+        };
+        window.addEventListener("resize", handleResize);
+        handleResize();
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     return (
         <div className="absolute top-0 left-0 px-4 bg-[#F2F5F8] min-h-screen w-full z-[999]">
             <div
@@ -43,20 +55,36 @@ function UserProfile() {
                     <Link to={'/'} className="bg-[#0D9CD8] px-[32px] py-[12px] hidden xs:flex text-white rounded-lg">Çıxış et </Link>
                 </div>
             </div>
-            <div className="bg-white min-h-[942px] max-w-[1224px] mx-auto rounded-xl sm:pt-7">
-                <div className="flex justify-evenly">
-                    <div className="border-r-2 min-h-[880px] hidden md:flex w-[295px] lg:w-[395px]">
-                        <ul className="w-full flex flex-col gap-5 px-6 pt-10 text-[#64717C]">
-                            {options.map((item) => (
-                                <li
-                                    key={item}
-                                    className={`cursor-pointer flex rounded-md ${selected === item ? "text-[#2C2C2E]" : ""
-                                        }`}
-                                    onClick={() => setSelected(item)}
-                                >
-                                    {item}
-                                </li>
-                            ))}
+            <div className="bg-white min-h-[942px] max-w-[1224px] mx-auto rounded-xl md:pt-7">
+                <div className="flex justify-evenly relative">
+                    {!optMenu &&
+                        <div onClick={() => setOptMenu(true)} className="z-30 md:hidden absolute left-3 top-3 hover:bg-[rgb(13,156,216)] rounded-full">
+                            <svg className="hover:fill-[#fff] fill-[#AEAEB2] p-1" xmlns="http://www.w3.org/2000/svg" width="41" height="42" viewBox="0 0 41 42" fill="none">
+                                <path d="M27.1943 24.2505C26.1519 24.2505 25.2634 23.8881 24.5287 23.1631C23.7941 22.4382 23.4268 21.5588 23.4268 20.5249C23.4268 19.491 23.7918 18.6094 24.522 17.88C25.2521 17.1506 26.1379 16.7859 27.1792 16.7859C28.2205 16.7859 29.1085 17.1483 29.8431 17.8733C30.5778 18.5982 30.9451 19.4771 30.9451 20.5098C30.9451 21.5426 30.58 22.4248 29.8499 23.1564C29.1197 23.8881 28.2345 24.2528 27.1943 24.2505ZM19.7333 33C19.348 33 19.0251 32.8706 18.7645 32.6119C18.5038 32.3531 18.3735 32.0325 18.3735 31.6499V31.1079C18.3735 30.7443 18.4651 30.3975 18.6482 30.0673C18.8313 29.7372 19.0784 29.4729 19.3896 29.2744C20.5679 28.6074 21.8036 28.0966 23.0965 27.7419C24.3883 27.3862 25.752 27.2083 27.1876 27.2083C28.621 27.2083 29.9841 27.3862 31.277 27.7419C32.57 28.0966 33.8056 28.6074 34.984 29.2744C35.294 29.474 35.5411 29.7383 35.7253 30.0673C35.9096 30.3963 36.0011 30.7432 36 31.1079V31.6483C36 32.0319 35.8697 32.3531 35.6091 32.6119C35.3485 32.8706 35.025 33 34.6385 33H19.7333ZM20.1158 30.8135V31.3271H34.2577V30.8135C33.1457 30.1911 31.9931 29.7138 30.8002 29.3814C29.6072 29.0491 28.403 28.8829 27.1876 28.8829C25.9711 28.8829 24.7663 29.0491 23.5734 29.3814C22.3815 29.7138 21.229 30.1911 20.1158 30.8135ZM27.1876 22.5776C27.7504 22.5776 28.2368 22.374 28.6468 21.967C29.0568 21.5599 29.2612 21.077 29.2601 20.5182C29.259 19.9594 29.0546 19.476 28.6468 19.0678C28.239 18.6596 27.7526 18.4566 27.1876 18.4588C26.6226 18.461 26.1356 18.664 25.7267 19.0678C25.3179 19.4715 25.1134 19.955 25.1134 20.5182C25.1134 21.0814 25.3179 21.5643 25.7267 21.967C26.1356 22.3696 26.6226 22.5731 27.1876 22.5776ZM17.9523 24.0565H7.8425C7.60323 24.0565 7.40272 23.9762 7.24096 23.8156C7.0792 23.655 6.99889 23.4559 7.00001 23.2183C7.00113 22.9808 7.08145 22.7822 7.24096 22.6228C7.40047 22.4633 7.60098 22.3835 7.8425 22.3835H17.9523C18.1904 22.3835 18.3904 22.4638 18.5521 22.6244C18.7139 22.785 18.7948 22.9841 18.7948 23.2217C18.7948 23.4592 18.7139 23.6577 18.5521 23.8172C18.3904 23.9767 18.1904 24.0565 17.9523 24.0565ZM24.6922 10.6729H7.8425C7.60323 10.6729 7.40272 10.5926 7.24096 10.432C7.0792 10.2714 6.99889 10.0724 7.00001 9.8348C7.00113 9.59724 7.08145 9.39872 7.24096 9.23923C7.40047 9.07974 7.60098 9 7.8425 9H24.6922C24.9303 9 25.1303 9.0803 25.292 9.2409C25.4538 9.40151 25.5347 9.60059 25.5347 9.83814C25.5347 10.0757 25.4538 10.2742 25.292 10.4337C25.1303 10.5932 24.9303 10.6729 24.6922 10.6729ZM20.1613 17.3647H7.8425C7.60323 17.3647 7.40272 17.2844 7.24096 17.1238C7.0792 16.9632 6.99889 16.7641 7.00001 16.5266C7.00113 16.289 7.08145 16.0905 7.24096 15.931C7.40047 15.7715 7.60098 15.6918 7.8425 15.6918H21.1268C20.928 15.9516 20.7471 16.2154 20.5842 16.4831C20.4213 16.7507 20.2792 17.0446 20.1613 17.3647Z" />
+                            </svg>
+                        </div>
+                    }
+                    {optMenu &&
+                        <IoCloseOutline onClick={() => (setOptMenu(false))} className="z-30 p-1 absolute md:hidden top-3 left-3 hover:bg-[#0D9CD8] hover:text-white rounded-full text-[#AEAEB2] h-[42px] w-[41px]" />
+                    }
+                    <div className="md:border-r-2 md:min-h-[880px]  md:flex md:w-[295px] lg:w-[395px]">
+
+                        <ul
+                            className={`w-full absolute rounded-xl md:static h-screen z-20 bg-white flex flex-col gap-5 px-6 pt-20 md:pt-12 text-[#64717C]
+                            transition-all duration-300 transform ${optMenu ? "translate-x-0" : "-translate-x-[1000px]"} md:translate-x-0`}
+                        >      {options.map((item) => (
+                            <li
+                                key={item}
+                                className={`cursor-pointer flex rounded-md ${selected === item ? "text-[#2C2C2E]" : ""
+                                    }`}
+                                onClick={() => {
+                                    setSelected(item);
+                                    setOptMenu(false);
+                                }}
+                            >
+                                {item}
+                            </li>
+                        ))}
                         </ul>
                     </div>
                     {selected === "Şəxsi Tibbi Kart" && (
@@ -114,7 +142,7 @@ function UserProfile() {
                         </div>
                     )}
                     {selected === "Növbələrim" && (
-                        <div className="flex ml-5 flex-col justify-start mt-[40px] w-full">
+                        <div className="flex ml-5 pt-8 md:pt-0 flex-col justify-start mt-[40px] w-full">
                             <h2 className="mb-[40px]">Növbələrim (1)</h2>
                             <div className="border-[1px] rounded-xl w-[90%] min-h-[350px] xs:p-9">
                                 <div className="bg-[#f2f5f8] mb-[24px] w-full xs:w-[138px] h-[138px] rounded-xl flex flex-col xs:flex-row items-center xs:rounded-[20px]">
@@ -150,7 +178,7 @@ function UserProfile() {
                         </div>
                     )}
                     {selected === "Bəyəndiyim uzmanlar" && (
-                        <div className="flex ml-5 flex-col justify-start mt-[40px] w-full">
+                        <div className="flex ml-5 flex-col pt-8 md:pt-0 justify-start mt-[40px] w-full">
                             <h2 className="mb-[40px]">Bəyəndiyim uzmanlar (1)</h2>
                             <div className="border-[1px] rounded-xl w-[90%] min-h-[350px] xs:p-9 flex flex-col justify-between">
                                 <div className="bg-[#f2f5f8] mb-[24px] w-full xs:w-[138px] h-[138px] rounded-xl flex flex-col xs:flex-row items-center xs:rounded-[20px]">
@@ -178,7 +206,7 @@ function UserProfile() {
                                     </div>
                                     <div className="flex text-xs items-center gap-3">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1099 3C18.8978 3 21 5.36867 21 8.50974V14.4972C21 16.1048 20.4541 17.5572 19.462 18.5877C18.5721 19.5109 17.4176 20 16.1233 20H7.87423C6.58242 20 5.42874 19.5118 4.53795 18.5877C3.54586 17.5572 3 16.1048 3 14.4972V8.50974C3 5.36867 5.10223 3 7.89014 3H16.1099ZM16.1099 4.30769H7.89014C5.78456 4.30769 4.25581 6.07482 4.25581 8.50974V14.4972C4.25581 15.7552 4.67107 16.879 5.42456 17.661C6.07423 18.3366 6.92233 18.6923 7.87674 18.6923H16.1099C16.1115 18.6906 16.1182 18.6923 16.1233 18.6923C17.0785 18.6923 17.9258 18.3366 18.5754 17.661C19.3298 16.879 19.7442 15.7552 19.7442 14.4972V8.50974C19.7442 6.07482 18.2154 4.30769 16.1099 4.30769ZM17.4293 8.34306C17.6478 8.6229 17.6068 9.03439 17.338 9.2628L13.6175 12.4117C13.147 12.8005 12.5844 12.995 12.0226 12.995C11.4625 12.995 10.9041 12.8023 10.4369 12.417L6.68205 9.26454C6.41163 9.03788 6.36977 8.62552 6.5866 8.3448C6.80512 8.06495 7.20028 8.02049 7.46986 8.24629L11.2214 11.3952C11.6927 11.784 12.3567 11.784 12.8313 11.3917L16.5452 8.24803C16.8148 8.01875 17.21 8.06234 17.4293 8.34306Z" fill="#0D9CD8" />
+                                            <path fillRule="evenodd" clipRule="evenodd" d="M16.1099 3C18.8978 3 21 5.36867 21 8.50974V14.4972C21 16.1048 20.4541 17.5572 19.462 18.5877C18.5721 19.5109 17.4176 20 16.1233 20H7.87423C6.58242 20 5.42874 19.5118 4.53795 18.5877C3.54586 17.5572 3 16.1048 3 14.4972V8.50974C3 5.36867 5.10223 3 7.89014 3H16.1099ZM16.1099 4.30769H7.89014C5.78456 4.30769 4.25581 6.07482 4.25581 8.50974V14.4972C4.25581 15.7552 4.67107 16.879 5.42456 17.661C6.07423 18.3366 6.92233 18.6923 7.87674 18.6923H16.1099C16.1115 18.6906 16.1182 18.6923 16.1233 18.6923C17.0785 18.6923 17.9258 18.3366 18.5754 17.661C19.3298 16.879 19.7442 15.7552 19.7442 14.4972V8.50974C19.7442 6.07482 18.2154 4.30769 16.1099 4.30769ZM17.4293 8.34306C17.6478 8.6229 17.6068 9.03439 17.338 9.2628L13.6175 12.4117C13.147 12.8005 12.5844 12.995 12.0226 12.995C11.4625 12.995 10.9041 12.8023 10.4369 12.417L6.68205 9.26454C6.41163 9.03788 6.36977 8.62552 6.5866 8.3448C6.80512 8.06495 7.20028 8.02049 7.46986 8.24629L11.2214 11.3952C11.6927 11.784 12.3567 11.784 12.8313 11.3917L16.5452 8.24803C16.8148 8.01875 17.21 8.06234 17.4293 8.34306Z" fill="#0D9CD8" />
                                         </svg>
                                         <p>dr.zarinababayeva@gmail.com</p>
                                     </div>
@@ -187,7 +215,7 @@ function UserProfile() {
                         </div>
                     )}
                     {selected === "Parametrlər" && (
-                        <div className="flex ml-5 flex-col justify-start mt-[40px] w-full">
+                        <div className="flex ml-5 pt-8 md:pt-0 flex-col justify-start mt-[40px] w-full">
                             <h1 className="pb-[48px]">Parametrlər</h1>
                             <div className="grid xs:grid-cols-2 gap-8">
                                 <div className="flex flex-col gap-2 w-[90%]">
@@ -227,14 +255,14 @@ function UserProfile() {
                                     />
                                 </div>
                             </div>
-                            <div className="flex justify-start pt-7 gap-6 sm:justify-end  sm:p-8">
+                            <div className="flex justify-start flex-wrap pt-7 gap-6 sm:justify-end  sm:p-8">
                                 <button className="text-white bg-[#0D9CD8] w-[174px] h-[52px] rounded-lg">Yadda saxla</button>
                                 <button className="text-[#2C2C2E] bg-[#F2F5F8] w-[174px] h-[52px] rounded-lg">Ləğv et</button>
                             </div>
                         </div>
                     )}
                     {selected === "Bildirişlər" && (
-                        <div className="flex ml-5 flex-col justify-start mt-[40px] w-full p-2 text-sm xs:text-base xs:p-0">
+                        <div className="flex ml-5 md:pt-0 flex-col justify-start mt-[65px] w-full p-2 text-sm xs:text-base xs:p-0">
                             <h2>Bildiriş seçimləri</h2>
                             <p className="text-[#64717C] pt-[24px] pb-[48px]">Medclubdan almaq istədiyiniz bildirişləri seçin və özəlləşdirin</p>
                             <h2>Növbələrlə bağlı bildirişlər</h2>
@@ -244,10 +272,10 @@ function UserProfile() {
                                 <div onClick={() => handleToggle("phone1")} className={`w-[54px] h-[32px] ${toggleStates.phone1 ? 'bg-[#34C759] justify-end transition-all duration-200' : 'bg-[#E5E5EA]'} rounded-[16px] flex justify-start items-center px-[3px]`}>
                                     <div className="w-[28px] h-[28px] bg-white rounded-full flex justify-center items-center">
                                         {
-                                             toggleStates.phone1 && (
+                                            toggleStates.phone1 && (
                                                 <div>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                                        <path d="M3.33301 8.00008L6.66634 11.3334L13.333 4.66675" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M3.33301 8.00008L6.66634 11.3334L13.333 4.66675" stroke="#34C759" stroke-width="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                                     </svg>
                                                 </div>
                                             )
@@ -257,13 +285,13 @@ function UserProfile() {
                             </div>
                             <div className="flex w-full justify-between pr-3 pt-[16px] pb-[48px]">
                                 <h2>Email   : mmmm@gmail.com</h2>
-                                <div onClick={() => handleToggle("email1")} className={`w-[54px] h-[32px] ${ toggleStates.email1 ? 'bg-[#34C759] justify-end transition-all duration-200' : 'bg-[#E5E5EA]'} rounded-[16px] flex justify-start items-center px-[3px]`}>
+                                <div onClick={() => handleToggle("email1")} className={`w-[54px] h-[32px] ${toggleStates.email1 ? 'bg-[#34C759] justify-end transition-all duration-200' : 'bg-[#E5E5EA]'} rounded-[16px] flex justify-start items-center px-[3px]`}>
                                     <div className="w-[28px] h-[28px] bg-white rounded-full flex justify-center items-center">
                                         {
                                             toggleStates.email1 && (
                                                 <div>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                                        <path d="M3.33301 8.00008L6.66634 11.3334L13.333 4.66675" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M3.33301 8.00008L6.66634 11.3334L13.333 4.66675" stroke="#34C759" stroke-width="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                                     </svg>
                                                 </div>
                                             )
@@ -281,7 +309,7 @@ function UserProfile() {
                                             toggleStates.phone2 && (
                                                 <div>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                                        <path d="M3.33301 8.00008L6.66634 11.3334L13.333 4.66675" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M3.33301 8.00008L6.66634 11.3334L13.333 4.66675" stroke="#34C759" stroke-width="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                                     </svg>
                                                 </div>
                                             )
@@ -297,7 +325,7 @@ function UserProfile() {
                                             toggleStates.email2 && (
                                                 <div>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                                        <path d="M3.33301 8.00008L6.66634 11.3334L13.333 4.66675" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M3.33301 8.00008L6.66634 11.3334L13.333 4.66675" stroke="#34C759" stroke-width="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                                     </svg>
                                                 </div>
                                             )
@@ -309,7 +337,7 @@ function UserProfile() {
                     )}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 export default UserProfile
