@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./components/main/Home";
 import About from "./components/main/About";
@@ -13,8 +13,13 @@ import DoctorsDetails from "./components/main/DoctorsDetails";
 import BlogDetails from "./components/main/BlogDetails";
 import OnlineChat from "./components/main/OnlineChat";
 import UserProfile from "./components/main/UserProfile";
+import { useEffect } from "react";
 
 function App() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
   return (
     <>
       <Routes>

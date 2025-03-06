@@ -46,13 +46,20 @@ function UserProfile() {
         <div className="absolute top-0 left-0 px-4 bg-[#F2F5F8] min-h-screen w-full z-[999]">
             {
                 addMedicine ?
-                    <div>
+                    <div className="fixed w-full">
                         <div
                             className="min-h-[112px] max-w-[1224px] mx-auto py-4 flex flex-wrap md:flex-nowrap justify-between items-center ">
                             <img className="h-[110px] w-[200px] object-cover" src="/assets/images/logo.png" alt="Medclub Logo" />
                         </div>
                         <div className="bg-white relative min-h-[942px] max-w-[1224px] mx-auto rounded-xl md:pt-7 flex-col flex items-center gap-20">
-                            <div onClick={backTo} className="cursor-pointer absolute top-[38px] left-[38px]">
+                            <div onClick={() => {
+                                if (step === 1) {
+                                    setAddMedicine(false)
+                                } else {
+                                    setStep((prev) => prev - 1)
+                                }
+                            }}
+                                className="cursor-pointer absolute top-[38px] left-[38px]">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M5 12L11 6M5 12L11 18M5 12H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
@@ -114,7 +121,11 @@ function UserProfile() {
 
                                 <button
                                     onClick={() => {
-                                        setStep((prev) => (prev < 3 ? prev + 1 : prev));
+                                        if (step < 3) {
+                                            setStep((prev) => prev + 1);
+                                        } else {
+                                            setAddMedicine(false);
+                                        }
                                     }}
                                     className="h-[50px] w-[80%] lg:w-[530px] bg-[#0D9CD8] rounded-xl text-white mt-[20px]"
                                 >
