@@ -77,7 +77,7 @@ function Header() {
                     <RiRadioButtonLine className="xl:hidden" />
                     <p className="hidden xl:flex"> Canlı çat</p>
                 </Link>
-                <div className="flex items-center w-[121px] justify-between">
+                <div className="flex items-center min-w-[121px] gap-3 justify-between">
                     <div className="relative cursor-pointer w-[40px] h-[40px] flex justify-center items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <g clipPath="url(#clip0_560_310)">

@@ -14,6 +14,7 @@ export default {
         'xs': '450px',
         'sm': '550px',
         'xll': '1120px',
+        'xlll': '1320px',
       },
     },
   },

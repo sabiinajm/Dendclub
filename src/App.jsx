@@ -14,6 +14,8 @@ import BlogDetails from "./components/main/BlogDetails";
 import OnlineChat from "./components/main/OnlineChat";
 import UserProfile from "./components/main/UserProfile";
 import { useEffect } from "react";
+import DoctorDashboard from "./components/dashboards/DoctorDashboard";
+import DashLayout from "./layout/DashLayout";
 
 function App() {
   const { pathname } = useLocation()
@@ -37,6 +39,9 @@ function App() {
           <Route path="/Əlaqə" element={<Contact />} />
           <Route path="/Çat" element={<OnlineChat />} />
           <Route path="/Profil" element={<UserProfile />} />
+        </Route>
+        <Route path="/Həkim-Dashboard" element={<DashLayout />}>
+          <Route index element={<DoctorDashboard />} /> 
         </Route>
       </Routes>
     </>

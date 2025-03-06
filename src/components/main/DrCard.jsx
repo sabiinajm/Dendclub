@@ -1,6 +1,6 @@
 import { Rate } from 'antd';
 import { Link } from 'react-router-dom';
-function DrCard({key}) {
+function DrCard({doctorId}) {
     return (
         <div className="bg-white rounded-[12px] min-h-[433px] w-full xs:w-[288px] py-[16px] pt-[12px] pb-[28px] flex flex-col items-center">
             <div className="bg-[#F2F5F8] relative h-[203px] w-[90%] xs:w-[256px] flex justify-center items-end rounded-[12px]">
@@ -23,7 +23,7 @@ function DrCard({key}) {
                     </div>
                     <p className='text-[#636366] text-[.75rem] text-center'>Lorem ipsum dolor sit amet lorem ipsum ipsum lorem ipsum dolor sit at</p>
                     <div className='flex justify-between py-[28px] px-[10px] gap-2 xs:gap-0 xs:px-0 text-[.9rem]'>
-                        <Link to={`/Həkimlərimiz/${key + 1}`} className='w-[90%] xs:w-[120px] h-[40px] bg-[#F0F0F7] rounded-[8px] text-[#2C2C2E] flex justify-center items-center transition-all duration-300 hover:bg-[#d4d4db]'>Ətraflı bax</Link>
+                        <Link to={`/Həkimlərimiz/${doctorId + 1}`} className='w-[90%] xs:w-[120px] h-[40px] bg-[#F0F0F7] rounded-[8px] text-[#2C2C2E] flex justify-center items-center transition-all duration-300 hover:bg-[#d4d4db]'>Ətraflı bax</Link>
                         <Link className='w-[90%] xs:w-[120px] h-[40px] bg-[#0D9CD8] hover:bg-[#0a7bab] rounded-[8px] text-white flex justify-center items-center transition-all duration-150'>Növbə götür</Link>
                     </div>
                 </div>
