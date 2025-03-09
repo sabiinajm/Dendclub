@@ -18,7 +18,10 @@ const data = {
 };
 
 const options = {
-    cutout: "70%",
+    cutout: "72%",
+    layout: {
+        padding: 20
+    },
     plugins: {
         legend: { display: false },
         tooltip: {
@@ -41,18 +44,23 @@ const options = {
     },
     hover: {
         mode: "nearest",
-        animationDuration: 300,
+        animationDuration: 300
     },
     elements: {
         arc: {
-            hoverOffset: 10,
+            hoverOffset: 12,
         },
     },
 };
 
 
 const DonutChart = () => {
-    return <Doughnut data={data} options={options} />;
+    return (
+        <div className="w-[250px] h-[250px]">
+            <Doughnut data={data} options={options} />
+        </div>
+    );
 };
+
 
 export default DonutChart;

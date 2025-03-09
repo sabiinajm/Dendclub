@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { HiBars3 } from "react-icons/hi2"
 
 //dashboard
-function Sidebar() {
+function Sidebar({ isOpen, setIsOpen }) {
   return (
-    <div className="absolute top-0 w-full bg-white z-10 md:static md:w-[272px] py-[32px] px-[16px]">
-      <HiBars3 className="text-2xl absolute right-4 md:hidden" />
+    <div className={`fixed top-0 w-full bg-white h-full z-10 md:static md:w-[272px] py-[32px] px-[16px] transition-all duration-300 ${isOpen ? "translate-x-0" : "-translate-x-[600px]"}`}>
+      <HiBars3 onClick={() => setIsOpen(!isOpen)} className="text-2xl absolute right-4 md:hidden text-[#0D9CD8]" />
       <img className="h-[99px] w-[240px] object-cover mb-[48px]" src="/assets/images/logo.png" alt="Medclub Logo" />
       <ul className="flex flex-col gap-2 text-sm md:text-base font-medium pb-[16px] border-b mb-[12px]">
         <li className="text-white bg-[#0D9CD8] rounded-[5px] flex p-3 gap-[14px]">

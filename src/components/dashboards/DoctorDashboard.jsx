@@ -1,12 +1,12 @@
 import DonutChart from "./components/DonutChart"
-
+import Table from "./components/Table";
 function DoctorDashboard() {
     return (
-        <div className="bg-[#F2F5F8] h-screen px-[32px]">
-            <h2 className="pt-[13px] pb-[32px]">
-                Xoş Gəlmisiniz, Dr.Adil Məmmədov
+        <div className="bg-[#F2F5F8] min-h-screen px-[12px] md:px-[32px]">
+            <h2 className="pt-[13px] pb-[32px] mx-auto">
+                Xoş Gəlmisiniz, <br className="sm:hidden" /> Dr.Adil Məmmədov
             </h2>
-            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[47px] pb-[32px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[20px] md:gap-[47px] pb-[32px]">
                 <div className="bg-white rounded-xl min-h-[150px] pt-[27px] pl-[25px] pr-[16px] pb-[14px] flex flex-col justify-between">
                     <p>Ümumi Növbə Sayı </p>
                     <div className="flex justify-between">
@@ -92,10 +92,10 @@ function DoctorDashboard() {
                     </div>
                 </div>
             </div>
-            <div className="xl:flex justify-between gap-[33px]">
+            <div className="flex flex-col xl:flex-row justify-between gap-[33px] pb-16">
                 {/* Növbə tələbləri */}
-                <div className="py-[32px] px-[24px] bg-white rounded-xl flex-1">
-                    <div className="flex justify-between pb-[36px]">
+                <div className="py-[32px] md:px-[24px] bg-white rounded-xl flex-1 mx-auto w-full">
+                    <div className="flex justify-between pb-[36px] w-[90%] mx-auto">
                         <p className="text-xl font-medium">Növbə tələbləri</p>
                         <div className="text-[#0D9CD8] flex">
                             Növbə tələbləri <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -103,42 +103,42 @@ function DoctorDashboard() {
                             </svg>
                         </div>
                     </div>
-                    <div className="py-[12px] px-[16px] min-w-[106px] flex justify-between items-center gap-3">
+                    <div className="py-[12px] px-[16px] w-[90%] md:w-full flex mx-auto justify-between items-center gap-3">
                         <div className="flex gap-3">
                             <img src="/assets/images/ava2.png" className="h-[44px] w-[44px] object-[90%] object-cover rounded-full" alt="" />
-                            <div>
+                            <div className="text-[.8rem] md:text-base">
                                 <h3>Leyla Aliyeva</h3>
-                                <p className="text-[.88rem] text-[#636366]">Klinikada görüş, 10:25</p>
+                                <p className="md:text-[.88rem] text-[#636366]">Klinikada görüş, 10:25</p>
                             </div>
                         </div>
-                        <p className="py-[6px] px-[12px] bg-[#E8FBED] text-[#2DAA4C] rounded-[4px] inline">Təsdiqləndi</p>
+                        <p className="py-[6px] px-[12px] text-[.8rem] md:text-base whitespace-nowrap bg-[#E8FBED] text-[#2DAA4C] rounded-[4px] inline">Təsdiqləndi</p>
                     </div>
-                    <div className="py-[12px] px-[16px] min-w-[106px] flex justify-between items-center">
+                    <div className="py-[12px] px-[16px] w-[90%] md:w-full mx-auto flex justify-between items-center">
                         <div className="flex gap-3">
                             <img src="/assets/images/ava2.png" className="h-[44px] w-[44px] object-[90%] object-cover rounded-full" alt="" />
-                            <div>
+                            <div className="text-[.8rem] md:text-base">
                                 <h3>Leyla Aliyeva</h3>
-                                <p className="text-[.88rem] text-[#636366]">Klinikada görüş, 10:25</p>
+                                <p className="md:text-[.88rem] text-[#636366]">Klinikada görüş, 10:25</p>
                             </div>
                         </div>
-                        <p className="py-[6px] px-[12px] bg-[#FFE4E3] text-[#FF3B30] rounded-[4px] inline">Ləğv edildi</p>
+                        <p className="py-[6px] px-[12px] text-[.8rem] md:text-base whitespace-nowrap bg-[#FFE4E3] text-[#FF3B30] rounded-[4px] inline">Ləğv edildi</p>
                     </div>
-                    <div className="py-[12px] px-[16px] min-w-[106px] flex justify-between items-center">
+                    <div className="py-[12px] px-[16px] w-[90%] mx-auto md:w-full flex justify-between items-center">
                         <div className="flex gap-3">
                             <img src="/assets/images/ava2.png" className="h-[44px] w-[44px] object-[90%] object-cover rounded-full" alt="" />
-                            <div>
+                            <div className="text-[.8rem] md:text-base">
                                 <h3>Leyla Aliyeva</h3>
-                                <p className="text-[.88rem] text-[#636366]">Klinikada görüş, 10:25</p>
+                                <p className="md:text-[.88rem] text-[#636366]">Klinikada görüş, 10:25</p>
                             </div>
                         </div>
-                        <p className="py-[6px] px-[12px] bg-[#FFE4E3] text-[#FF3B30] rounded-[4px] inline">Ləğv edildi</p>
+                        <p className="py-[6px] px-[12px] text-[.8rem] md:text-base  whitespace-nowrap  bg-[#FFE4E3] text-[#FF3B30] rounded-[4px] inline">Ləğv edildi</p>
                     </div>
-                    <div className="py-[12px] px-[16px] min-w-[106px] flex justify-between items-center">
+                    <div className="py-[12px] px-[16px] w-[90%] mx-auto md:w-full flex justify-between items-center">
                         <div className="flex gap-3">
                             <img src="/assets/images/ava2.png" className="h-[44px] w-[44px] object-[90%] object-cover rounded-full" alt="" />
-                            <div>
+                            <div className="text-[.8rem] md:text-base">
                                 <h3>Leyla Aliyeva</h3>
-                                <p className="text-[.88rem] text-[#636366]">Klinikada görüş, 10:25</p>
+                                <p className="md:text-[.88rem] text-[#636366]">Klinikada görüş, 10:25</p>
                             </div>
                         </div>
                         <div className="flex gap-6">
@@ -169,12 +169,12 @@ function DoctorDashboard() {
                             </div>
                         </div>
                     </div>
-                    <div className="py-[12px] px-[16px] min-w-[106px] flex justify-between items-center">
+                    <div className="py-[12px] px-[16px] w-[90%] mx-auto md:w-full flex justify-between items-center">
                         <div className="flex gap-3">
                             <img src="/assets/images/ava2.png" className="h-[44px] w-[44px] object-[90%] object-cover rounded-full" alt="" />
-                            <div>
+                            <div className="text-[.8rem] md:text-base">
                                 <h3>Leyla Aliyeva</h3>
-                                <p className="text-[.88rem] text-[#636366]">Klinikada görüş, 10:25</p>
+                                <p className="md:text-[.88rem] text-[#636366]">Klinikada görüş, 10:25</p>
                             </div>
                         </div>
                         <div className="flex gap-6">
@@ -216,12 +216,57 @@ function DoctorDashboard() {
                             </option>
                         </select>
                     </div>
-                    <div className="w-full flex justify-center items-center">
-                        <div className="w-[200px] h-[200px]">
+                    <div className="flex flex-col justify-center items-center md:w-[320px] mx-auto">
+                        <div className="self-start text-[#2C2C2E]">
+                            <h3 className="font-medium">Növbə sayı</h3>
+                            <p className="text-[.8rem] opacity-50">3 noyabr 2024</p>
+                        </div>
+                        <div className="w-full flex justify-center items-center">
                             <DonutChart />
+                        </div>
+                        <div className="flex justify-between w-full">
+                            <div className="text-[#2C2C2E] flex flex-col">
+                                <div className="flex items-center gap-2">
+                                    <div className="bg-[#0D9CD8] w-[8px] h-[8px] rounded-full"></div>
+                                    <p className="text-sm font-medium opacity-70">Qadın</p>
+                                </div>
+                                <p className="text-[.75rem] pl-5 opacity-70">40%</p>
+                            </div>
+                            <div className="text-[#2C2C2E] flex flex-col">
+                                <div className="flex items-center gap-2">
+                                    <div className="bg-[#0D2FD8] w-[8px] h-[8px] rounded-full"></div>
+                                    <p className="text-sm font-medium opacity-70">Kişi</p>
+                                </div>
+                                <p className="text-[.75rem] pl-5 opacity-70">32%</p>
+                            </div>
+                            <div className="text-[#2C2C2E] flex flex-col">
+                                <div className="flex items-center gap-2">
+                                    <div className="bg-[#838DFF] w-[8px] h-[8px] rounded-full"></div>
+                                    <p className="text-sm font-medium opacity-70">Uşaq</p>
+                                </div>
+                                <p className="text-[.75rem] pl-5 opacity-70">28%</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className=" pb-[60px]">
+                <h3 className="text-xl text-[#2C2C2E] font-medium py-[24px]">Sonuncu Növbələr</h3>
+                <div className="relative pb-[20px]">
+                    <input type="text" placeholder="Axtarın" className="pl-14 outline-none placeholder:text-[#64717C] border border-[#F2F5F8] rounded-[12px] h-[48px] w-full sm:w-[328px]" />
+                    <svg className="absolute top-3 left-6" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <g clip-path="url(#clip0_1199_13635)">
+                            <path d="M3.5 10C3.5 10.9193 3.68106 11.8295 4.03284 12.6788C4.38463 13.5281 4.90024 14.2997 5.55025 14.9497C6.20026 15.5998 6.97194 16.1154 7.82122 16.4672C8.6705 16.8189 9.58075 17 10.5 17C11.4193 17 12.3295 16.8189 13.1788 16.4672C14.0281 16.1154 14.7997 15.5998 15.4497 14.9497C16.0998 14.2997 16.6154 13.5281 16.9672 12.6788C17.3189 11.8295 17.5 10.9193 17.5 10C17.5 9.08075 17.3189 8.1705 16.9672 7.32122C16.6154 6.47194 16.0998 5.70026 15.4497 5.05025C14.7997 4.40024 14.0281 3.88463 13.1788 3.53284C12.3295 3.18106 11.4193 3 10.5 3C9.58075 3 8.6705 3.18106 7.82122 3.53284C6.97194 3.88463 6.20026 4.40024 5.55025 5.05025C4.90024 5.70026 4.38463 6.47194 4.03284 7.32122C3.68106 8.1705 3.5 9.08075 3.5 10Z" stroke="#64717C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M21.5 21L15.5 15" stroke="#64717C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1199_13635">
+                                <rect width="24" height="24" fill="white" transform="translate(0.5)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <Table />
             </div>
         </div>
     )
