@@ -14,10 +14,10 @@ import BlogDetails from "./components/main/BlogDetails";
 import OnlineChat from "./components/main/OnlineChat";
 import UserProfile from "./components/main/UserProfile";
 import { useEffect } from "react";
-import DoctorDashboard from "./components/dashboards/Doctor/ControlPanel";
 import DashLayout from "./layout/DashLayout";
 import ControlPanel from "./components/dashboards/Doctor/ControlPanel";
 import Queues from "./components/dashboards/Doctor/Queues";
+import Patients from "./components/dashboards/Doctor/Patients";
 
 function App() {
   const { pathname } = useLocation()
@@ -29,23 +29,24 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/Haqqımızda" element={<About />} />
-          <Route path="/Həkimlərimiz" element={<Doctors />} />
-          <Route path="/Həkimlərimiz/:id" element={<DoctorsDetails />} />
-          <Route path="/Klinikalarımız" element={<Hospitals />} />
-          <Route path="/Klinikalarımız/:id" element={<HospitalDetails />} />
-          <Route path="/Apteklərimiz" element={<Pharmacy />} />
-          <Route path="/Apteklərimiz/:id" element={<PharmacyDetails />} />
-          <Route path="/Bloglar" element={<Blogs />} />
-          <Route path="/Bloglar/:id" element={<BlogDetails />} />
-          <Route path="/Əlaqə" element={<Contact />} />
-          <Route path="/Çat" element={<OnlineChat />} />
-          <Route path="/Profil" element={<UserProfile />} />
+          <Route path="Haqqımızda" element={<About />} />
+          <Route path="Həkimlərimiz" element={<Doctors />} />
+          <Route path="Həkimlərimiz/:id" element={<DoctorsDetails />} />
+          <Route path="Klinikalarımız" element={<Hospitals />} />
+          <Route path="Klinikalarımız/:id" element={<HospitalDetails />} />
+          <Route path="Apteklərimiz" element={<Pharmacy />} />
+          <Route path="Apteklərimiz/:id" element={<PharmacyDetails />} />
+          <Route path="Bloglar" element={<Blogs />} />
+          <Route path="Bloglar/:id" element={<BlogDetails />} />
+          <Route path="Əlaqə" element={<Contact />} />
+          <Route path="Çat" element={<OnlineChat />} />
+          <Route path="Profil" element={<UserProfile />} />
         </Route>
-        <Route path="/Həkim-Dashboard" element={<DashLayout />}>
+        <Route path="Həkim-Dashboard" element={<DashLayout />}>
           <Route index element={<ControlPanel />} />
-          <Route path="/Həkim-Dashboard/İdarəpaneli" element={<ControlPanel />} />
-          <Route path="/Həkim-Dashboard/Növbələr" element={<Queues />} />
+          <Route path="İdarəpaneli" element={<ControlPanel />} />
+          <Route path="Növbələr" element={<Queues />} />
+          <Route path="Xəstələr" element={<Patients />} />
         </Route>
       </Routes>
     </>
