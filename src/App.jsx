@@ -18,6 +18,7 @@ import DashLayout from "./layout/DashLayout";
 import ControlPanel from "./components/dashboards/Doctor/ControlPanel";
 import Queues from "./components/dashboards/Doctor/Queues";
 import Patients from "./components/dashboards/Doctor/Patients";
+import Payments from "./components/dashboards/Doctor/Payments";
 
 function App() {
   const { pathname } = useLocation()
@@ -47,6 +48,7 @@ function App() {
           <Route path="İdarəpaneli" element={<ControlPanel />} />
           <Route path="Növbələr" element={<Queues />} />
           <Route path="Xəstələr" element={<Patients />} />
+          <Route path="Ödənişlər" element={<Payments />} />
         </Route>
       </Routes>
     </>
