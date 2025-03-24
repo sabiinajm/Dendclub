@@ -5,7 +5,7 @@ function Blogs() {
     return (
         <main className="bg-[#f2f5f8] pt-[24px]">
             <div className="max-w-[1224px] mx-auto px-2">
-                <h1 className="pt-[7rem] text-[#030303] text-2xl md:text-[2.5rem] leading-[56px] text-start">Həkimlərdən məsləhətlər!</h1>
+                <h1 className="pt-[2rem] text-[#030303] text-2xl md:text-[2.2rem] leading-[56px] text-start">Həkimlərdən məsləhətlər!</h1>
                 <div className="min-h-[245px] flex items-center">
                     <div className="flex flex-col md:flex-row gap-4 items-center">
                         <div className="relative">
