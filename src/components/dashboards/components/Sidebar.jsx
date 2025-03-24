@@ -84,7 +84,7 @@ function Sidebar({ isOpen, setIsOpen }) {
       className={`fixed lg:relative top-0 left-0 w-full lg:w-[272px] h-full bg-white z-10 py-[32px] px-[16px] transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         }`}
     >    <HiBars3 onClick={() => setIsOpen(!isOpen)} className="text-2xl absolute right-4 lg:hidden text-[#0D9CD8]" />
-      <Link to="İdarəpaneli"><img className="h-[99px] w-[240px] object-cover mb-[48px]" src="/assets/images/logo.png" alt="Medclub Logo" /></Link>
+      <Link to="İdarepaneli"><img className="h-[99px] w-[240px] object-cover mb-[48px]" src="/assets/images/logo.png" alt="Medclub Logo" /></Link>
       <ul className="flex flex-col gap-2 text-sm md:text-base font-medium pb-[16px] border-b mb-[12px]">
         {menuItems.map((item, index) => (
           <NavLink
