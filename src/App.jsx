@@ -19,8 +19,8 @@ import ControlPanel from "./components/dashboards/Doctor/ControlPanel";
 import Queues from "./components/dashboards/Doctor/Queues";
 import Patients from "./components/dashboards/Doctor/Patients";
 import Payments from "./components/dashboards/Doctor/Payments";
-import AllBlogs from "./components/dashboards/Doctor/allBlogs";
 import CreateBlogs from "./components/dashboards/Doctor/CreateBlogs";
+import DashBlogs from "./components/dashboards/Doctor/DashBlogs";
 
 function App() {
   const { pathname } = useLocation()
@@ -51,7 +51,7 @@ function App() {
           <Route path="Növbələr" element={<Queues />} />
           <Route path="Xəstələr" element={<Patients />} />
           <Route path="Ödənişlər" element={<Payments />} />
-          <Route path="Bloq" element={<AllBlogs />} />
+          <Route path="Bloq" element={<DashBlogs />} />
           <Route path="Bloq/BloqYarat" element={<CreateBlogs />} />
         </Route>
       </Routes>

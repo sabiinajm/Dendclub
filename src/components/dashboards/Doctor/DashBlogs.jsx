@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import Blogs from "../../main/Blogs"
 
-function AllBlogs() {
+function DashBlogs() {
   return (
     <div className="bg-[#F2F5F8] min-h-screen px-[12px] md:px-[32px] relative">
       <Blogs />
@@ -14,4 +14,4 @@ function AllBlogs() {
     </div>
   )
 }
-export default AllBlogs
+export default DashBlogs
