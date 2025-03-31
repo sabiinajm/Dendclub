@@ -119,3 +119,20 @@ body {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
+
+.ql-container {
+  border: none !important;
+  background-color: #F2F5F8 !important;
+  border-radius: 12px;
+}
+
+.ql-editor {
+  min-height: 201px;
+  padding: 16px; 
+  border-radius: 12px;
+}
+.ql-toolbar {
+  border-left: none !important;
+  border-right: none !important;
+  border-top: 12px !important;
+}
