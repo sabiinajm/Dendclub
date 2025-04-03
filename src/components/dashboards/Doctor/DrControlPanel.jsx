@@ -1,6 +1,6 @@
 import DonutChart from "../components/DonutChart"
 import Table from "../components/Table";
-function ControlPanel() {
+function DrControlPanel() {
     return (
         <>
             <div className="bg-[#F2F5F8] min-h-screen px-[12px] md:px-[32px]">
@@ -273,4 +273,4 @@ function ControlPanel() {
         </>
     )
 }
-export default ControlPanel
+export default DrControlPanel

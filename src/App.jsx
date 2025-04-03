@@ -15,12 +15,13 @@ import OnlineChat from "./components/main/OnlineChat";
 import UserProfile from "./components/main/UserProfile";
 import { useEffect } from "react";
 import DashLayout from "./layout/DashLayout";
-import ControlPanel from "./components/dashboards/Doctor/ControlPanel";
 import Queues from "./components/dashboards/Doctor/Queues";
 import Patients from "./components/dashboards/Doctor/Patients";
 import Payments from "./components/dashboards/Doctor/Payments";
 import CreateBlogs from "./components/dashboards/Doctor/CreateBlogs";
 import DashBlogs from "./components/dashboards/Doctor/DashBlogs";
+import DrControlPanel from "./components/dashboards/Doctor/DrControlPanel";
+import DrAccount from "./components/dashboards/Doctor/DrAccount";
 
 function App() {
   const { pathname } = useLocation()
@@ -46,13 +47,14 @@ function App() {
           <Route path="Profil" element={<UserProfile />} />
         </Route>
         <Route path="Həkim-Dashboard" element={<DashLayout />}>
-          <Route index element={<ControlPanel />} />
-          <Route path="İdarəpaneli" element={<ControlPanel />} />
+          <Route index element={<DrControlPanel />} />
+          <Route path="İdarəpaneli" element={<DrControlPanel />} />
           <Route path="Növbələr" element={<Queues />} />
           <Route path="Xəstələr" element={<Patients />} />
           <Route path="Ödənişlər" element={<Payments />} />
           <Route path="Bloq" element={<DashBlogs />} />
           <Route path="Bloq/BloqYarat" element={<CreateBlogs />} />
+          <Route path="Hesabın" element={<DrAccount />} />
         </Route>
       </Routes>
     </>

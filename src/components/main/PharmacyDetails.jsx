@@ -20,13 +20,103 @@ function PharmacyDetails() {
                     </div>
                 </div>
                 <img src="/assets/images/aptek.png" className="w-full h-[640px] object-cover rounded-[20px]" alt="" />
+                <div className="flex justify-between items-center pb-[32px]">
+                    <h2 className="pt-[53px] text-[2rem] text-[#2C2C2E] font-medium">Dərmanlar</h2>
+                    <p>Daha çox</p>
+                </div>
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[24px]">
+                    <div className="min-h-[441px] relative border border-[#AEAEB2] rounded-xl">
+                        <div className="bg-[#10B981] text-white text-sm w-[93px] h-[32px] flex justify-center items-center rounded-tl-xl">
+                            <p>Mövcuddur</p>
+                        </div>
+                        <img src="/assets/images/derman.png" alt="" className="mt-[50px] w-[255px] h-[180px] object-cover mx-auto" />
+                        <div className="px-[20px]">
+                            <h2 className="text-xl font-medium pt-[5px]">Alora 100 ml şərbət</h2>
+                            <p className="text-[#636366]">Nevrasteniya, Stress simptomları, Yuxusuzluq</p>
+                            <h2 className="text-xl font-semibold pt-[7px]">10 AZN</h2>
+                            <div className="flex gap-[10px] py-[16px]">
+                                <button className="bg-[#0D9CD8] text-white rounded-xl w-[176px] h-[48px]">Ətrafli bax</button>
+                                <div className="bg-white rounded-xl py-[8px] px-[16px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                                        <path d="M29.096 10.2176C28.9733 10.0349 28.8095 9.88547 28.6187 9.78226C28.4278 9.67905 28.2155 9.62509 28 9.62502H9.77729L8.23863 5.81627C8.03747 5.31426 7.69599 4.88536 7.25766 4.58417C6.81934 4.28299 6.304 4.12315 5.77729 4.12502H2.66663V6.87502H5.77729L12.1026 22.5294C12.2039 22.7799 12.3749 22.9938 12.5939 23.1443C12.8129 23.2948 13.0701 23.375 13.3333 23.375H24C24.556 23.375 25.0533 23.0189 25.2493 22.484L29.2493 11.484C29.3249 11.2759 29.3504 11.0519 29.3237 10.8314C29.297 10.6108 29.2189 10.4002 29.096 10.2176ZM23.076 20.625H14.2226L10.8893 12.375H26.076L23.076 20.625Z" fill="#0D9CD8" />
+                                        <path d="M14 28.875C15.1046 28.875 16 27.9516 16 26.8125C16 25.6734 15.1046 24.75 14 24.75C12.8954 24.75 12 25.6734 12 26.8125C12 27.9516 12.8954 28.875 14 28.875Z" fill="#0D9CD8" />
+                                        <path d="M23.3334 28.875C24.4379 28.875 25.3334 27.9516 25.3334 26.8125C25.3334 25.6734 24.4379 24.75 23.3334 24.75C22.2288 24.75 21.3334 25.6734 21.3334 26.8125C21.3334 27.9516 22.2288 28.875 23.3334 28.875Z" fill="#0D9CD8" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="min-h-[441px] relative border border-[#AEAEB2] rounded-xl">
+                        <div className="bg-[#F59E0B] text-white text-sm w-[93px] h-[32px] flex justify-center items-center rounded-tl-xl">
+                            <p>Məhduddur</p>
+                        </div>
+                        <img src="/assets/images/derman.png" alt="" className="mt-[50px] w-[255px] h-[180px] object-cover mx-auto" />
+                        <div className="px-[20px]">
+                            <h2 className="text-xl font-medium pt-[5px]">Alora 100 ml şərbət</h2>
+                            <p className="text-[#636366]">Nevrasteniya, Stress simptomları, Yuxusuzluq</p>
+                            <h2 className="text-xl font-semibold pt-[7px]">10 AZN</h2>
+                            <div className="flex gap-[10px] py-[16px]">
+                                <button className="bg-[#0D9CD8] text-white rounded-xl w-[176px] h-[48px]">Ətrafli bax</button>
+                                <div className="bg-white rounded-xl py-[8px] px-[16px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                                        <path d="M29.096 10.2176C28.9733 10.0349 28.8095 9.88547 28.6187 9.78226C28.4278 9.67905 28.2155 9.62509 28 9.62502H9.77729L8.23863 5.81627C8.03747 5.31426 7.69599 4.88536 7.25766 4.58417C6.81934 4.28299 6.304 4.12315 5.77729 4.12502H2.66663V6.87502H5.77729L12.1026 22.5294C12.2039 22.7799 12.3749 22.9938 12.5939 23.1443C12.8129 23.2948 13.0701 23.375 13.3333 23.375H24C24.556 23.375 25.0533 23.0189 25.2493 22.484L29.2493 11.484C29.3249 11.2759 29.3504 11.0519 29.3237 10.8314C29.297 10.6108 29.2189 10.4002 29.096 10.2176ZM23.076 20.625H14.2226L10.8893 12.375H26.076L23.076 20.625Z" fill="#0D9CD8" />
+                                        <path d="M14 28.875C15.1046 28.875 16 27.9516 16 26.8125C16 25.6734 15.1046 24.75 14 24.75C12.8954 24.75 12 25.6734 12 26.8125C12 27.9516 12.8954 28.875 14 28.875Z" fill="#0D9CD8" />
+                                        <path d="M23.3334 28.875C24.4379 28.875 25.3334 27.9516 25.3334 26.8125C25.3334 25.6734 24.4379 24.75 23.3334 24.75C22.2288 24.75 21.3334 25.6734 21.3334 26.8125C21.3334 27.9516 22.2288 28.875 23.3334 28.875Z" fill="#0D9CD8" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="min-h-[441px] relative border border-[#AEAEB2] rounded-xl">
+                        <div className="bg-[#10B981] text-white text-sm w-[93px] h-[32px] flex justify-center items-center rounded-tl-xl">
+                            <p>Mövcuddur</p>
+                        </div>
+                        <img src="/assets/images/derman.png" alt="" className="mt-[50px] w-[255px] h-[180px] object-cover mx-auto" />
+                        <div className="px-[20px]">
+                            <h2 className="text-xl font-medium pt-[5px]">Alora 100 ml şərbət</h2>
+                            <p className="text-[#636366]">Nevrasteniya, Stress simptomları, Yuxusuzluq</p>
+                            <h2 className="text-xl font-semibold pt-[7px]">10 AZN</h2>
+                            <div className="flex gap-[10px] py-[16px]">
+                                <button className="bg-[#0D9CD8] text-white rounded-xl w-[176px] h-[48px]">Ətrafli bax</button>
+                                <div className="bg-white rounded-xl py-[8px] px-[16px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                                        <path d="M29.096 10.2176C28.9733 10.0349 28.8095 9.88547 28.6187 9.78226C28.4278 9.67905 28.2155 9.62509 28 9.62502H9.77729L8.23863 5.81627C8.03747 5.31426 7.69599 4.88536 7.25766 4.58417C6.81934 4.28299 6.304 4.12315 5.77729 4.12502H2.66663V6.87502H5.77729L12.1026 22.5294C12.2039 22.7799 12.3749 22.9938 12.5939 23.1443C12.8129 23.2948 13.0701 23.375 13.3333 23.375H24C24.556 23.375 25.0533 23.0189 25.2493 22.484L29.2493 11.484C29.3249 11.2759 29.3504 11.0519 29.3237 10.8314C29.297 10.6108 29.2189 10.4002 29.096 10.2176ZM23.076 20.625H14.2226L10.8893 12.375H26.076L23.076 20.625Z" fill="#0D9CD8" />
+                                        <path d="M14 28.875C15.1046 28.875 16 27.9516 16 26.8125C16 25.6734 15.1046 24.75 14 24.75C12.8954 24.75 12 25.6734 12 26.8125C12 27.9516 12.8954 28.875 14 28.875Z" fill="#0D9CD8" />
+                                        <path d="M23.3334 28.875C24.4379 28.875 25.3334 27.9516 25.3334 26.8125C25.3334 25.6734 24.4379 24.75 23.3334 24.75C22.2288 24.75 21.3334 25.6734 21.3334 26.8125C21.3334 27.9516 22.2288 28.875 23.3334 28.875Z" fill="#0D9CD8" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="min-h-[441px] relative border border-[#AEAEB2] rounded-xl">
+                        <div className="bg-[#FF3B30] text-white text-sm w-[93px] h-[32px] flex justify-center items-center rounded-tl-xl">
+                            <p>Tükənib</p>
+                        </div>
+                        <img src="/assets/images/derman.png" alt="" className="mt-[50px] w-[255px] h-[180px] object-cover mx-auto" />
+                        <div className="px-[20px]">
+                            <h2 className="text-xl font-medium pt-[5px]">Alora 100 ml şərbət</h2>
+                            <p className="text-[#636366]">Nevrasteniya, Stress simptomları, Yuxusuzluq</p>
+                            <h2 className="text-xl font-semibold pt-[7px]">10 AZN</h2>
+                            <div className="flex gap-[10px] py-[16px]">
+                                <button className="bg-[#0D9CD8] text-white rounded-xl w-[176px] h-[48px]">Ətrafli bax</button>
+                                <div className="bg-white rounded-xl py-[8px] px-[16px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                                        <path d="M29.096 10.2176C28.9733 10.0349 28.8095 9.88547 28.6187 9.78226C28.4278 9.67905 28.2155 9.62509 28 9.62502H9.77729L8.23863 5.81627C8.03747 5.31426 7.69599 4.88536 7.25766 4.58417C6.81934 4.28299 6.304 4.12315 5.77729 4.12502H2.66663V6.87502H5.77729L12.1026 22.5294C12.2039 22.7799 12.3749 22.9938 12.5939 23.1443C12.8129 23.2948 13.0701 23.375 13.3333 23.375H24C24.556 23.375 25.0533 23.0189 25.2493 22.484L29.2493 11.484C29.3249 11.2759 29.3504 11.0519 29.3237 10.8314C29.297 10.6108 29.2189 10.4002 29.096 10.2176ZM23.076 20.625H14.2226L10.8893 12.375H26.076L23.076 20.625Z" fill="#0D9CD8" />
+                                        <path d="M14 28.875C15.1046 28.875 16 27.9516 16 26.8125C16 25.6734 15.1046 24.75 14 24.75C12.8954 24.75 12 25.6734 12 26.8125C12 27.9516 12.8954 28.875 14 28.875Z" fill="#0D9CD8" />
+                                        <path d="M23.3334 28.875C24.4379 28.875 25.3334 27.9516 25.3334 26.8125C25.3334 25.6734 24.4379 24.75 23.3334 24.75C22.2288 24.75 21.3334 25.6734 21.3334 26.8125C21.3334 27.9516 22.2288 28.875 23.3334 28.875Z" fill="#0D9CD8" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <h2 className="pt-[53px] text-[2rem] text-[#2C2C2E] font-medium">Ünvan</h2>
                 <p className="text-[#64717C] pb-3">Bakı,Süleyman Rüstəmov küçəsi</p>
                 <iframe className="w-full rounded-[12px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d384.7404828742046!2d49.88072826669062!3d40.39405115027642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d3081f19f11%3A0x1017bf5178c72b52!2sN%C9%99sir%20Aptek!5e0!3m2!1sen!2saz!4v1734374107520!5m2!1sen!2saz" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div className="py-[80px]">
                     <h3 className="text-[#222B45] pb-[22px] text-[1.1rem] font-medium md:text-[2rem]">Əlaqə</h3>
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
-                        <div className="flex flex-col sm:flex-row gap-6">
+                    <div className="flex flex-col sm:flex-row sm:justify-between gap-6 flex-wrap">
+                        <div className="flex flex-col sm:flex-row gap-6 flex-wrap">
                             <div className="flex items-center gap-3">
                                 <div className="h-[50px] w-[50px] bg-white rounded-[12px] flex justify-center items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="51" viewBox="0 0 50 51" fill="none">
