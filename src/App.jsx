@@ -22,6 +22,7 @@ import CreateBlogs from "./components/dashboards/Doctor/CreateBlogs";
 import DashBlogs from "./components/dashboards/Doctor/DashBlogs";
 import DrControlPanel from "./components/dashboards/Doctor/DrControlPanel";
 import DrAccount from "./components/dashboards/Doctor/DrAccount";
+import MedDetails from "./components/main/MedDetails";
 
 function App() {
   const { pathname } = useLocation()
@@ -40,6 +41,7 @@ function App() {
           <Route path="Klinikalarımız/:id" element={<HospitalDetails />} />
           <Route path="Apteklərimiz" element={<Pharmacy />} />
           <Route path="Apteklərimiz/:id" element={<PharmacyDetails />} />
+          <Route path="Apteklərimiz/:id/:title" element={<MedDetails />} />
           <Route path="Bloglar" element={<Blogs />} />
           <Route path="Bloglar/:id" element={<BlogDetails />} />
           <Route path="Əlaqə" element={<Contact />} />
