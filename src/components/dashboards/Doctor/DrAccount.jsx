@@ -1,8 +1,6 @@
 import { Rate } from "antd"
 import { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
-import { HiArrowLeft } from "react-icons/hi2";
-import { LuArrowLeft, LuArrowLeftFromLine } from "react-icons/lu";
 const menuItems = [
   { label: "Profilim" },
   { label: "Haqqımda" },

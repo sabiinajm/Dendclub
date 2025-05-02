@@ -23,6 +23,7 @@ import DashBlogs from "./components/dashboards/Doctor/DashBlogs";
 import DrControlPanel from "./components/dashboards/Doctor/DrControlPanel";
 import DrAccount from "./components/dashboards/Doctor/DrAccount";
 import MedDetails from "./components/main/MedDetails";
+import PhControlPanel from "./components/dashboards/Pharmacy/PhControlPanel";
 
 function App() {
   const { pathname } = useLocation()
@@ -57,6 +58,10 @@ function App() {
           <Route path="Bloq" element={<DashBlogs />} />
           <Route path="Bloq/BloqYarat" element={<CreateBlogs />} />
           <Route path="Hesabın" element={<DrAccount />} />
+        </Route>
+        <Route path="Aptek-Dashboard" element={<DashLayout />}>
+          <Route index element={<PhControlPanel />} />
+          <Route path="İdarəpaneli" element={<PhControlPanel />} />
         </Route>
       </Routes>
     </>

@@ -1,6 +1,29 @@
 import { HiBars3 } from "react-icons/hi2"
+import { useLocation } from "react-router-dom";
 
 function DashHeader({ isOpen, setIsOpen }) {
+    const dashboardInfo = {
+        "/Aptek-Dashboard": {
+            name: "Kanon Aptek",
+            role: "Aptek",
+            image: "/assets/images/aptek.png",
+        },
+        "/Hekim-Dashboard": {
+            name: "Dr. Adil Məmmədov",
+            role: "Uzman Həkim",
+            image: "/assets/images/ava.jpeg",
+        },
+    };
+
+    const currentInfo =
+    Object.entries(dashboardInfo).find(([path]) =>
+        location.pathname.includes(path)
+    )?.[1] || {
+        name: "",
+        role: "",
+        image: "",
+    };
+
     return (
         <div className="min-h-[76px] w-[90%] sm:w-[94%] mx-auto flex items-center sm:justify-between ">
             <div className="flex items-center gap-2 sm:gap-4">
@@ -29,10 +52,10 @@ function DashHeader({ isOpen, setIsOpen }) {
                     <div className="absolute right-1 top-[2px] bg-[#34C759] h-[7px] w-[7px] rounded-full"></div>
                 </div>
                 <div className="flex gap-3 items-center">
-                    <img src="/assets/images/ava.jpeg" className="h-[44px] min-w-[44px] w-[44px] object-[90%] object-cover rounded-full" alt="" />
+                    <img   src={currentInfo.image} className="h-[44px] min-w-[44px] w-[44px] object-[90%] object-cover rounded-full" alt="" />
                     <div className="hidden md:flex flex-col font-medium">
-                        <h4 className="text-[#14171A]">Adil Məmmədov</h4>
-                        <p className="text-[#64717C] text-[.75rem]">Uzman Psixoloq</p>
+                        <h4 className="text-[#14171A]">  {currentInfo.name}</h4>
+                        <p className="text-[#64717C] text-[.75rem]">{currentInfo.role}</p>
                     </div>
                 </div>
             </div>
