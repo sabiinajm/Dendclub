@@ -24,6 +24,7 @@ import DrControlPanel from "./components/dashboards/Doctor/DrControlPanel";
 import DrAccount from "./components/dashboards/Doctor/DrAccount";
 import MedDetails from "./components/main/MedDetails";
 import PhControlPanel from "./components/dashboards/Pharmacy/PhControlPanel";
+import Orders from "./components/dashboards/Pharmacy/Orders";
 
 function App() {
   const { pathname } = useLocation()
@@ -62,6 +63,7 @@ function App() {
         <Route path="Aptek-Dashboard" element={<DashLayout />}>
           <Route index element={<PhControlPanel />} />
           <Route path="İdarəpaneli" element={<PhControlPanel />} />
+          <Route path="Sifarişlər" element={<Orders />} />
         </Route>
       </Routes>
     </>

@@ -1,5 +1,4 @@
 import { HiBars3 } from "react-icons/hi2"
-import { useLocation } from "react-router-dom";
 
 function DashHeader({ isOpen, setIsOpen }) {
     const dashboardInfo = {
