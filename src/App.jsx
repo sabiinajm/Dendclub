@@ -25,6 +25,7 @@ import DrAccount from "./components/dashboards/Doctor/DrAccount";
 import MedDetails from "./components/main/MedDetails";
 import PhControlPanel from "./components/dashboards/Pharmacy/PhControlPanel";
 import Orders from "./components/dashboards/Pharmacy/Orders";
+import Medicines from "./components/dashboards/Pharmacy/Medicines";
 
 function App() {
   const { pathname } = useLocation()
@@ -64,6 +65,7 @@ function App() {
           <Route index element={<PhControlPanel />} />
           <Route path="İdarəpaneli" element={<PhControlPanel />} />
           <Route path="Sifarişlər" element={<Orders />} />
+          <Route path="Dərmanlar" element={<Medicines />} />
         </Route>
       </Routes>
     </>
