@@ -8,6 +8,7 @@ function Table() {
     const hekimTable = ["Xəstə", "Cins", "Görüş növü", "Xəstəlik"];
     const aptekTable = ["Müştəri", "Dərman adı", "Miqdarı", "Məbləğ", "Status"];
     const dermanTable = ["Derman kodu", "Dərman adı", "Şəkli", "Kateqoriya", "Miqdarı", "Məbləğ", "Status"];
+    const customerTable = ["Müştəri", "Əlaqə", "Cins", "Status"];
 
     const hekimData = [
         { id: 1, name: "Adil Əliyev", gender: "Kişi", type: "Klinikada görüş", disease: "Obsessiv-Kompulsiv Pozuntu", date: "2024-03-05" },
@@ -28,6 +29,12 @@ function Table() {
         { id: 3, medicineId: "001123464", medicineName: "Alora 100 ml", image: "/assets/images/derman.png", category: "Soğukdəymə", quantityMed: "10", costMed: "20 AZN", status: "Tükənib" },
     ];
 
+    const customerData = [
+        { id: 1, customer: "Adil Əliyev", contact: "adilaliyev@gmail.com", genders: "Kişi", status: "Mövcuddur", date: "2024-03-05" },
+        { id: 1, customer: "Adil Əliyev", contact: "adilaliyev@gmail.com", genders: "Kişi", status: "Mövcuddur", date: "2024-03-05" },
+        { id: 1, customer: "Adil Əliyev", contact: "adilaliyev@gmail.com", genders: "Kişi", status: "Mövcuddur", date: "2024-03-05" },
+        ];
+
     const [data, setData] = useState([]);
     const [sortOrder, setSortOrder] = useState(null);
 
@@ -40,6 +47,8 @@ function Table() {
             setData(aptekData);
         } else if (decodedPath.includes("/Aptek-Dashboard/Dərmanlar")) {
             setData(dermanData);
+        } else if (decodedPath.includes("/Aptek-Dashboard/Müştərilər")) {
+            setData(customerData);
         } else {
             setData([]);
         }
@@ -75,6 +84,10 @@ function Table() {
             return dermanTable.map((header, index) => (
                 <th key={index} className="px-4 py-2 text-left border font-medium">{header}</th>
             ));
+        } else if (decodedPath.includes("/Aptek-Dashboard/Müştərilər")) {
+            return customerTable.map((header, index) => (
+                <th key={index} className="px-4 py-2 text-left border font-medium">{header}</th>
+            ));
         }
     };
 
@@ -97,7 +110,7 @@ function Table() {
                     {data.map((item) => (
                         <tr key={item.id} className="border text-[.9rem]">
                             <td className="px-4 py-2 border">{item.name || item.customer || item.medicineId}</td>
-                            <td className="px-4 py-2 border">{item.gender || item.medicineName || item.medicineName}</td>
+                            <td className="px-4 py-2 border">{item.gender || item.medicineName || item.medicineName || item.contact}</td>
                             <td className="px-4 py-2 border">{item.type || item.quantity || <td className="px-4 py-2">
                                 {item.image ? <img src={item.image} alt={item.medicineName} className="w-[90px] h-[60px] object-contain" /> : item.medicineName}
                             </td>
