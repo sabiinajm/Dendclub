@@ -7,10 +7,15 @@ function DashHeader({ isOpen, setIsOpen }) {
             role: "Aptek",
             image: "/assets/images/aptek.png",
         },
-        "/Hekim-Dashboard": {
+        "/Həkim-Dashboard": {
             name: "Dr. Adil Məmmədov",
             role: "Uzman Həkim",
             image: "/assets/images/ava.jpeg",
+        },
+        "/Klinika-Dashboard": {
+            name: "İstanbul NS Klinika",
+            role: "Bakı",
+            image: "/assets/images/klinika2.jpg",
         },
     };
 
