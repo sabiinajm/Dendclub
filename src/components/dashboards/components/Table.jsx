@@ -5,16 +5,16 @@ import { useLocation } from "react-router-dom";
 function Table() {
     const location = useLocation();
 
-    const hekimTable = ["Xəstə", "Cins", "Görüş növü", "Xəstəlik"];
+    const hekimTable = ["Xəstə","Email", "Cins", "Görüş növü", "Xəstəlik"];
     const aptekTable = ["Müştəri", "Dərman adı", "Miqdarı", "Məbləğ", "Status"];
     const dermanTable = ["Derman kodu", "Dərman adı", "Şəkli", "Kateqoriya", "Miqdarı", "Məbləğ", "Status"];
     const customerTable = ["Müştəri", "Əlaqə", "Cins", "Status"];
 
     const hekimData = [
-        { id: 1, name: "Adil Əliyev", gender: "Kişi", type: "Klinikada görüş", disease: "Obsessiv-Kompulsiv Pozuntu", date: "2024-03-05" },
-        { id: 2, name: "Leyla Həsənli", gender: "Qadın", type: "Klinikada görüş", disease: "Obsessiv-Kompulsiv Pozuntu", date: "2024-02-20" },
-        { id: 3, name: "Dilarə Babayeva", gender: "Qadın", type: "Video görüş", disease: "Bipolyar Pozuntu", date: "2024-03-08" },
-        { id: 4, name: "Davud Əliyev", gender: "Kişi", type: "Video görüş", disease: "Bipolyar Pozuntu", date: "2024-01-15" },
+        { id: 1, name: "Adil Əliyev", email:"adilaliyev@gmail.com", gender: "Kişi", type: "Klinikada görüş", disease: "Obsessiv-Kompulsiv Pozuntu", date: "2024-03-05" },
+        { id: 2, name: "Leyla Həsənli",email:"adilaliyev@gmail.com", gender: "Qadın", type: "Klinikada görüş", disease: "Obsessiv-Kompulsiv Pozuntu", date: "2024-02-20" },
+        { id: 3, name: "Dilarə Babayeva",email:"adilaliyev@gmail.com", gender: "Qadın", type: "Video görüş", disease: "Bipolyar Pozuntu", date: "2024-03-08" },
+        { id: 4, name: "Davud Əliyev",email:"adilaliyev@gmail.com", gender: "Kişi", type: "Video görüş", disease: "Bipolyar Pozuntu", date: "2024-01-15" },
     ];
 
     const aptekData = [
@@ -24,15 +24,15 @@ function Table() {
     ];
 
     const dermanData = [
-        { id: 1, medicineId: "001123464", medicineName: "Alora 100 ml", image: "/assets/images/derman.png", category: "Ağrı kəsici", quantityMed: "30", costMed: "20 AZN", status: "Mövcuddur" },
-        { id: 2, medicineId: "001123464", medicineName: "Alora 100 ml", image: "/assets/images/derman.png", category: "Antibiotik", quantityMed: "03", costMed: "20 AZN", status: "Məhduddur" },
-        { id: 3, medicineId: "001123464", medicineName: "Alora 100 ml", image: "/assets/images/derman.png", category: "Soğukdəymə", quantityMed: "10", costMed: "20 AZN", status: "Tükənib" },
+        { id: 1, medicineId: "001123464", medicineName: "Alora 100 ml", image: "/assets/images/derman.png", category: "Ağrı kəsici", quantityMed: "30", costMed: "20 AZN", status2: "Mövcuddur" },
+        { id: 2, medicineId: "001123464", medicineName: "Alora 100 ml", image: "/assets/images/derman.png", category: "Antibiotik", quantityMed: "03", costMed: "20 AZN", status2: "Məhduddur" },
+        { id: 3, medicineId: "001123464", medicineName: "Alora 100 ml", image: "/assets/images/derman.png", category: "Soğukdəymə", quantityMed: "10", costMed: "20 AZN", status2: "Tükənib" },
     ];
 
     const customerData = [
-        { id: 1, customer: "Adil Əliyev", contact: "adilaliyev@gmail.com", genders: "Kişi", status: "Mövcuddur", date: "2024-03-05" },
-        { id: 1, customer: "Adil Əliyev", contact: "adilaliyev@gmail.com", genders: "Kişi", status: "Mövcuddur", date: "2024-03-05" },
-        { id: 1, customer: "Adil Əliyev", contact: "adilaliyev@gmail.com", genders: "Kişi", status: "Mövcuddur", date: "2024-03-05" },
+        { id: 1, customer: "Adil Əliyev", contact: "adilaliyev@gmail.com", gender: "Kişi", status3: "Gözləyir", date: "2024-03-05" },
+        { id: 1, customer: "Adil Əliyev", contact: "adilaliyev@gmail.com", gender: "Kişi", status3: "Aktiv", date: "2024-03-05" },
+        { id: 1, customer: "Adil Əliyev", contact: "adilaliyev@gmail.com", gender: "Kişi", status3: "Bloklanmış", date: "2024-03-05" },
         ];
 
     const [data, setData] = useState([]);
@@ -110,22 +110,20 @@ function Table() {
                     {data.map((item) => (
                         <tr key={item.id} className="border text-[.9rem]">
                             <td className="px-4 py-2 border">{item.name || item.customer || item.medicineId}</td>
-                            <td className="px-4 py-2 border">{item.gender || item.medicineName || item.medicineName || item.contact}</td>
-                            <td className="px-4 py-2 border">{item.type || item.quantity || <td className="px-4 py-2">
+                            <td className="px-4 py-2 border">{item.email || item.medicineName || item.medicineName || item.contact}</td>
+                            <td className="px-4 py-2 border">{item.gender || item.quantity || <td className="px-4 py-2">
                                 {item.image ? <img src={item.image} alt={item.medicineName} className="w-[90px] h-[60px] object-contain" /> : item.medicineName}
                             </td>
                             }</td>
-                            <td className="px-4 py-2 border">{item.disease || item.cost || item.category}</td>
-                            {location.pathname.includes("/Aptek-Dashboard") && (
-                                <td className="px-4 py-2 border">{item.quantityMed}</td>
-                            )}
-                            {location.pathname.includes("/Aptek-Dashboard") && (
+                            <td className="px-4 py-2 border">{item.type || item.cost || item.category || item.status3}</td>
+                            <td className="px-4 py-2 border">{item.disease || item.status || item.quantityMed || item.date}</td>
+                             {decodeURIComponent(location.pathname).includes("/Aptek-Dashboard/Dərmanlar") && (
                                 <td className="px-4 py-2 border">{item.costMed}</td>
                             )}
-                            {location.pathname.includes("/Aptek-Dashboard") && (
-                                <td className="px-4 py-2">{item.status}</td>
+                             {decodeURIComponent(location.pathname).includes("/Aptek-Dashboard/Dərmanlar") && (
+                                <td className="px-4 py-2 border">{item.status2}</td>
                             )}
-                            {/* <td className="px-4 py-2">{item.date}</td> */}
+
                             <td className="px-4 flex justify-end border-none items-center h-[60px]">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#2C2C2E" strokeWidth="2" />
