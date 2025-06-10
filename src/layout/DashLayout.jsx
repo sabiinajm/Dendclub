@@ -7,7 +7,7 @@ function DashLayout() {
     const [isOpen, setIsOpen] = useState(true);
     const location = useLocation()
     
-    const role = location.pathname.includes("Aptek") ? "Aptek" : "Həkim";
+    const role = location.pathname.includes("Aptek") ? "Aptek" : location.pathname.includes("Klinika") ? "Klinika"  :  "Həkim";
     console.log(role)
 
     return (
