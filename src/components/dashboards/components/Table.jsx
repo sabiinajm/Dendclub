@@ -9,6 +9,8 @@ function Table() {
     const aptekTable = ["Müştəri", "Dərman adı", "Miqdarı", "Məbləğ", "Status"];
     const dermanTable = ["Derman kodu", "Dərman adı", "Şəkli", "Kateqoriya", "Miqdarı", "Məbləğ", "Status"];
     const customerTable = ["Müştəri", "Əlaqə", "Cins", "Status"];
+    const pasientTable = ["Pasient", "Doğum tarixi", "Həkiminin adı", "Müalicə statusu", "Son aktivlik tarixi"];
+    const reportTable = ["Həkim", "Aylıq qazancı", "Xəstə sayı", "Maaşı", "Qeydiyyat tarixi"];
 
     const hekimData = [
         { id: 1, name: "Adil Əliyev", email:"adilaliyev@gmail.com", gender: "Kişi", type: "Klinikada görüş", disease: "Obsessiv-Kompulsiv Pozuntu", date: "2024-03-05" },
@@ -35,6 +37,18 @@ function Table() {
         { id: 1, customer: "Adil Əliyev", contact: "adilaliyev@gmail.com", gender: "Kişi", status3: "Bloklanmış", date: "2024-03-05" },
         ];
 
+    const pasientData = [
+        { id: 1, patient: "Adil Əliyev", birthDate: "03.11.2001", doctor: "Əliyev", status3: "Gözləyir", date: "2024-03-02" },
+        { id: 1, patient: "Leyla Həsənli", birthDate: "03.11.2001", doctor: "Əliyev", status3: "Aktiv", date: "2024-03-05" },
+        { id: 1, patient: "Dilarə Babayeva", birthDate: "03.11.2001", doctor: "Əliyev", status3: "Aktiv", date: "2024-03-05" },
+        ];
+
+    const reportData = [
+        { id: 1, patient: "Adil Əliyev", income: "2500 AZN", patients: "20", wage: "800", date: "2024-03-02" },
+        { id: 1, patient: "Leyla Həsənli", income: "2500 AZN", patients: "20", wage: "800", date: "2024-03-05" },
+        { id: 1, patient: "Dilarə Babayeva", income: "2500 AZN", patients: "20", wage: "800", date: "2024-03-05" },
+        ];
+
     const [data, setData] = useState([]);
     const [sortOrder, setSortOrder] = useState(null);
 
@@ -49,7 +63,12 @@ function Table() {
             setData(dermanData);
         } else if (decodedPath.includes("/Aptek-Dashboard/Müştərilər")) {
             setData(customerData);
-        } else {
+        } else if (decodedPath.includes("/Klinika-Dashboard/Pasientlər")) {
+            setData(pasientData);
+        } else if (decodedPath.includes("/Klinika-Dashboard/Hesabatlar")) {
+            setData(reportData);
+        }
+        else {
             setData([]);
         }
     }, [location.pathname]);
@@ -88,6 +107,14 @@ function Table() {
             return customerTable.map((header, index) => (
                 <th key={index} className="px-4 py-2 text-left border font-medium">{header}</th>
             ));
+        } else if (decodedPath.includes("/Klinika-Dashboard/Pasientlər")) {
+            return pasientTable.map((header, index) => (
+                <th key={index} className="px-4 py-2 text-left border font-medium">{header}</th>
+            ));
+        } else if (decodedPath.includes("/Klinika-Dashboard/Hesabatlar")) {
+            return reportTable.map((header, index) => (
+                <th key={index} className="px-4 py-2 text-left border font-medium">{header}</th>
+            ));
         }
     };
 
@@ -109,13 +136,13 @@ function Table() {
                 <tbody>
                     {data.map((item) => (
                         <tr key={item.id} className="border text-[.9rem]">
-                            <td className="px-4 py-2 border">{item.name || item.customer || item.medicineId}</td>
-                            <td className="px-4 py-2 border">{item.email || item.medicineName || item.medicineName || item.contact}</td>
-                            <td className="px-4 py-2 border">{item.gender || item.quantity || <td className="px-4 py-2">
+                            <td className="px-4 py-2 border">{item.name || item.customer || item.medicineId || item.patient}</td>
+                            <td className="px-4 py-2 border">{item.email || item.medicineName || item.medicineName || item.contact || item.birthDate || item.income}</td>
+                            <td className="px-4 py-2 border">{item.gender || item.quantity || item.doctor || item.patients || <td className="px-4 py-2">
                                 {item.image ? <img src={item.image} alt={item.medicineName} className="w-[90px] h-[60px] object-contain" /> : item.medicineName}
                             </td>
                             }</td>
-                            <td className="px-4 py-2 border">{item.type || item.cost || item.category || item.status3}</td>
+                            <td className="px-4 py-2 border">{item.type || item.cost || item.category || item.status3 || item.wage }</td>
                             <td className="px-4 py-2 border">{item.disease || item.status || item.quantityMed || item.date}</td>
                              {decodeURIComponent(location.pathname).includes("/Aptek-Dashboard/Dərmanlar") && (
                                 <td className="px-4 py-2 border">{item.costMed}</td>

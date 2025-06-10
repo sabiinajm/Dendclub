@@ -29,6 +29,10 @@ import Medicines from "./components/dashboards/Pharmacy/Medicines";
 import Customers from "./components/dashboards/Pharmacy/Customers";
 import PhAccount from "./components/dashboards/Pharmacy/PhAccount";
 import HsControlPanel from "./components/dashboards/Hospital/HsControlPanel";
+import HsPatients from "./components/dashboards/Hospital/HsPatients";
+import HsDoctors from "./components/dashboards/Hospital/HsDoctors";
+import HsReports from "./components/dashboards/Hospital/HsReports";
+import HsAccount from "./components/dashboards/Hospital/HsAccount";
 
 function App() {
   const { pathname } = useLocation()
@@ -75,6 +79,10 @@ function App() {
         <Route path="Klinika-Dashboard" element={<DashLayout />}>
           <Route index element={<HsControlPanel />} />
           <Route path="İdarəpaneli" element={<HsControlPanel />} />
+          <Route path="Pasientlər" element={<HsPatients />} />
+          <Route path="Həkimlər" element={<HsDoctors />} />
+          <Route path="Hesabatlar" element={<HsReports />} />
+          <Route path="Hesabın" element={<HsAccount />} />
         </Route>
       </Routes>
     </>

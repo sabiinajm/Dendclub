@@ -1,3 +1,4 @@
+import BarChart from "../components/BarChart"
 import LineGraph from "../components/LineGraph"
 
 function HsControlPanel() {
@@ -103,6 +104,19 @@ function HsControlPanel() {
                 </div>
                 <div className="overflow-hidden">
                     <LineGraph />
+                </div>
+            </div>
+               <div className="bg-white w-full rounded-[20px] mt-[70px] py-[23px] px-[25px]">
+                <div className="w-full flex justify-between">
+                    <h3 className="text-xl">Hər həkim üzrə aylıq randevu sayı</h3>
+                    <div className="w-[110px]">
+                        <select className="bg-[#F2F5F8] px-2 pl-7 py-[6px] rounded-[4px] w-[110px]">
+                            <option>Fevral</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <BarChart />
                 </div>
             </div>
         </div>
