@@ -33,6 +33,8 @@ import HsPatients from "./components/dashboards/Hospital/HsPatients";
 import HsDoctors from "./components/dashboards/Hospital/HsDoctors";
 import HsReports from "./components/dashboards/Hospital/HsReports";
 import HsAccount from "./components/dashboards/Hospital/HsAccount";
+import Register from "./components/main/Register";
+import Login from "./components/main/Login";
 
 function App() {
   const { pathname } = useLocation()
@@ -57,6 +59,8 @@ function App() {
           <Route path="Əlaqə" element={<Contact />} />
           <Route path="Çat" element={<OnlineChat />} />
           <Route path="Profil" element={<UserProfile />} />
+          <Route path="Qeydiyyat" element={<Register />} />
+          <Route path="Login" element={<Login />} />
         </Route>
         <Route path="Həkim-Dashboard" element={<DashLayout />}>
           <Route index element={<DrControlPanel />} />
