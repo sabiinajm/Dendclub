@@ -243,7 +243,7 @@ function Sidebar({ isOpen, setIsOpen, role }) {
               to={`${item.label.replace(/\s+/g, "")}`}
               key={index}
               className={({ isActive }) =>
-                `border-t rounded-[5px] flex p-3 gap-3 cursor-pointer transition-all ${isActive ? "bg-[#0D9CD8] text-white" : "text-[#636366] hover:bg-gray-200"
+                `first-of-type:border-t rounded-[5px] flex p-3 gap-3 cursor-pointer transition-all ${isActive ? "bg-[#0D9CD8] text-white" : "text-[#636366] hover:bg-gray-200"
                 }`
               }
             >

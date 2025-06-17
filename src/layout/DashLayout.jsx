@@ -8,14 +8,15 @@ function DashLayout() {
     const location = useLocation()
 
     const decodedPath = decodeURIComponent(location.pathname);
+    const firstSegment = decodedPath.split('/')[1] || "";
 
-    const role = decodedPath.includes("Aptek")
+    const role = firstSegment.includes("Aptek")
         ? "Aptek"
-        : decodedPath.includes("Həkim")
+        : firstSegment.includes("Həkim")
             ? "Həkim"
-        : decodedPath.includes("Klinika")
-            ? "Klinika"
-            : "Ümumi-Admin-Panel";
+            : firstSegment.includes("Klinika")
+                ? "Klinika"
+                : "Ümumi-Admin-Panel";
 
     console.log(role);
 
