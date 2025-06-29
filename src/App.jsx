@@ -35,6 +35,9 @@ import HsReports from "./components/dashboards/Hospital/HsReports";
 import HsAccount from "./components/dashboards/Hospital/HsAccount";
 import Register from "./components/main/Register";
 import Login from "./components/main/Login";
+import AdminControlPanel from "./components/dashboards/Admin/AdminControlPanel";
+import AdminHospitals from "./components/dashboards/Admin/AdminHospitals";
+import AdminPharmacy from "./components/dashboards/Admin/AdminPharmacy";
 import QueueCreatePage from "./components/main/QueueCreatePage";
 
 function App() {
