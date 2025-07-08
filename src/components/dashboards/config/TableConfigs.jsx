@@ -149,5 +149,19 @@ export const tableConfigs = [
             { id: 2, patient: "Leyla Həsənli", doctor: "Adil Əliyev", hospital: "Baku Medical Plaza", date: "2024-03-11", status: "Tamamlanıb" },
             { id: 3, patient: "Dilarə Babayeva", doctor: "Adil Əliyev", hospital: "Medera", date: "2024-03-11", status: "Ləğv edilib" },
         ]
+    },
+    {
+        pathMatch: "/Ümumi-Admin-Panel/Randevular",
+        headers: [
+            { label: "Xəstə", key: "patient" },
+            { label: "Telefon", key: "phone" },
+            { label: "Klinika", key: "hospital" },
+            { label: "Status", key: "status" }
+        ],
+        data: [
+            { id: 1, patient: "Adil Əliyev", phone: "+994 50 123 45 67", hospital: "Baku Medical Plaza", date: "2024-03-11", status: "Gözləyir" },
+            { id: 2, patient: "Leyla Həsənli", phone: "+994 50 123 45 67", hospital: "Baku Medical Plaza", date: "2024-03-11", status: "Tamamlanıb" },
+            { id: 3, patient: "Dilarə Babayeva", phone: "+994 50 123 45 67", hospital: "Medera", date: "2024-03-11", status: "Ləğv edilib" },
+        ]
     }
 ];

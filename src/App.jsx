@@ -35,6 +35,10 @@ import HsReports from "./components/dashboards/Hospital/HsReports";
 import HsAccount from "./components/dashboards/Hospital/HsAccount";
 import Register from "./components/main/Register";
 import Login from "./components/main/Login";
+import AdminControlPanel from "./components/dashboards/Admin/AdminControlPanel";
+import AdminHospitals from "./components/dashboards/Admin/AdminHospitals";
+import AdminPharmacy from "./components/dashboards/Admin/AdminPharmacy";
+import AdminRandevu from "./components/dashboards/Admin/AdminRandevu";
 
 function App() {
   const { pathname } = useLocation()
@@ -89,10 +93,11 @@ function App() {
           <Route path="Hesabın" element={<HsAccount />} />
         </Route>
         <Route path="Ümumi-Admin-Panel" element={<DashLayout />}>
-          <Route index element={<AdminControlPanel />} />
+          <Route index element={<AdminControlPanel/>} />
           <Route path="İdarəpaneli" element={<AdminControlPanel />} />
           <Route path="Klinikalar" element={<AdminHospitals />} />
           <Route path="Apteklər" element={<AdminPharmacy />} />
+          <Route path="Randevular" element={<AdminRandevu />} />
         </Route>
       </Routes>
     </>
