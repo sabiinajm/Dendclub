@@ -126,12 +126,16 @@ function AdminRandevu() {
                         </thead>
                         <tbody>
                             {customTimeSlots.map((slot, index) => (
-                                <tr key={index} className="bg-white hover:bg-gray-50">
-                                    <td className="border px-4 w-[40px] py-2 font-normal text-gray-700 ">
+                                <tr key={index} className=" hover:bg-gray-50">
+                                    <td className="border bg-white px-4 w-[40px] py-2 font-normal text-gray-700 ">
                                         <p>{slot.start}</p> <br />
                                         <p>{slot.end}</p>
                                     </td>
-
+                                    <td className="border border-[#AEAEB2] bg-[#E9E6E6]"></td>
+                                    <td className="border border-[#AEAEB2] bg-[#E9E6E6]"></td>
+                                    <td className="border border-[#AEAEB2] bg-[#E9E6E6]"></td>
+                                    <td className="border border-[#AEAEB2] bg-[#E9E6E6]"></td>
+                                  
                                 </tr>
                             ))}
                         </tbody>

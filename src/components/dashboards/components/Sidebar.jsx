@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HiBars3 } from "react-icons/hi2"
 import { Link, NavLink } from "react-router-dom";
 
@@ -209,7 +209,7 @@ function Sidebar({ isOpen, setIsOpen, role }) {
         </svg>
     },
   ]
-
+  const [isHesabatlarOpen, setIsHesabatlarOpen] = useState(false);
   return (
     <div
       className={`fixed lg:relative top-0 left-0 w-full lg:w-[272px] h-full bg-white z-10 py-[32px] px-[16px] transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
@@ -217,33 +217,69 @@ function Sidebar({ isOpen, setIsOpen, role }) {
     >    <HiBars3 onClick={() => setIsOpen(!isOpen)} className="text-2xl absolute right-4 lg:hidden text-[#0D9CD8]" />
       <Link to="İdarəpaneli"><img className="h-[99px] w-[240px] object-cover mb-[48px]" src="/assets/images/logo.png" alt="Medclub Logo" /></Link>
       <ul className="flex flex-col gap-2 text-sm md:text-base font-medium pb-[16px] mb-[12px]">
-        {menuItems.map((item, index) => (
-          <NavLink
-            to={`${item.label.replace(/\s+/g, "")}`}
-            key={index}
-            className={({ isActive }) =>
-              `rounded-[5px] flex p-3 gap-3 cursor-pointer transition-all ${isActive ? "bg-[#0D9CD8] text-white" : "text-[#636366] hover:bg-gray-200"
-              }`
-            }
-          >
-            <span>
-              {React.cloneElement(item.icon, {
-                stroke: item.icon.props.stroke ? "white" : "#636366"
-              })}
-            </span>
-            {item.label}
-          </NavLink>
-        ))}
-      </ul>
-      {
-        role === "Ümumi-Admin-Panel" ? ' ':
-        <ul>
-          {menuItems2.map((item, index) => (
+        {menuItems.map((item, index) => {
+          const isHesabatlar = item.label === "Hesabatlar";
+
+          return isHesabatlar ? (
+            <div key={index}>
+              <div
+                onClick={() => setIsHesabatlarOpen(!isHesabatlarOpen)}
+                className={`rounded-[5px] flex p-3 gap-3 cursor-pointer transition-all text-[#636366] hover:bg-gray-200`}
+              >
+                <span>
+                  {React.cloneElement(item.icon, {
+                    stroke: "#636366",
+                  })}
+                </span>
+                {item.label}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M7 10L12 14L17 10"
+                    stroke="#636366"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+
+              {isHesabatlarOpen && (
+                <div className=" ml-2 mt-1 flex flex-col gap-2">
+                  <NavLink
+                    to="MaliyyeHesabatlari"
+                    className="text-[#636366] p-2 hover:bg-gray-100 rounded-md flex gap-2 text-sm items-center"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M7 8H12M7 12H17M12 16H17" stroke="#0D9CD8" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                    Maliyyə hesabatları
+                  </NavLink>
+                  <NavLink
+                    to="HekimPerformansi"
+                    className="text-[#636366] p-2 hover:bg-gray-100 rounded-md flex gap-2 text-sm items-center"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M7 8H12M7 12H17M12 16H17" stroke="#636366" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                    Həkim performansı
+                  </NavLink>
+                </div>
+              )}
+            </div>
+          ) : (
             <NavLink
               to={`${item.label.replace(/\s+/g, "")}`}
               key={index}
               className={({ isActive }) =>
-                `first-of-type:border-t rounded-[5px] flex p-3 gap-3 cursor-pointer transition-all ${isActive ? "bg-[#0D9CD8] text-white" : "text-[#636366] hover:bg-gray-200"
+                `rounded-[5px] flex p-3 gap-3 cursor-pointer transition-all ${isActive
+                  ? "bg-[#0D9CD8] text-white"
+                  : "text-[#636366] hover:bg-gray-200"
                 }`
               }
             >
@@ -254,8 +290,30 @@ function Sidebar({ isOpen, setIsOpen, role }) {
               </span>
               {item.label}
             </NavLink>
-          ))}
-        </ul>
+          );
+        })}
+      </ul>
+      {
+        role === "Ümumi-Admin-Panel" ? ' ' :
+          <ul>
+            {menuItems2.map((item, index) => (
+              <NavLink
+                to={`${item.label.replace(/\s+/g, "")}`}
+                key={index}
+                className={({ isActive }) =>
+                  `first-of-type:border-t rounded-[5px] flex p-3 gap-3 cursor-pointer transition-all ${isActive ? "bg-[#0D9CD8] text-white" : "text-[#636366] hover:bg-gray-200"
+                  }`
+                }
+              >
+                <span>
+                  {React.cloneElement(item.icon, {
+                    stroke: item.icon.props.stroke ? "white" : "#636366",
+                  })}
+                </span>
+                {item.label}
+              </NavLink>
+            ))}
+          </ul>
       }
     </div>
   )

@@ -39,6 +39,9 @@ import AdminControlPanel from "./components/dashboards/Admin/AdminControlPanel";
 import AdminHospitals from "./components/dashboards/Admin/AdminHospitals";
 import AdminPharmacy from "./components/dashboards/Admin/AdminPharmacy";
 import AdminRandevu from "./components/dashboards/Admin/AdminRandevu";
+import AdminUsers from "./components/dashboards/Admin/AdminUsers";
+import AdminFinancialReports from "./components/dashboards/Admin/AdminFinancialReports";
+import AdminDrPerformance from "./components/dashboards/Admin/AdminDrPerformance";
 
 function App() {
   const { pathname } = useLocation()
@@ -98,6 +101,9 @@ function App() {
           <Route path="Klinikalar" element={<AdminHospitals />} />
           <Route path="Apteklər" element={<AdminPharmacy />} />
           <Route path="Randevular" element={<AdminRandevu />} />
+          <Route path="İstifadəçilər" element={<AdminUsers />} />
+          <Route path="MaliyyeHesabatlari" element={<AdminFinancialReports />} />
+          <Route path="HekimPerformansi" element={<AdminDrPerformance />} />
         </Route>
       </Routes>
     </>
