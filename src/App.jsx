@@ -42,6 +42,7 @@ import AdminRandevu from "./components/dashboards/Admin/AdminRandevu";
 import AdminUsers from "./components/dashboards/Admin/AdminUsers";
 import AdminFinancialReports from "./components/dashboards/Admin/AdminFinancialReports";
 import AdminDrPerformance from "./components/dashboards/Admin/AdminDrPerformance";
+import QueueCreatePage from "./components/main/QueueCreatePage";
 
 function App() {
   const { pathname } = useLocation()
@@ -68,6 +69,7 @@ function App() {
           <Route path="Profil" element={<UserProfile />} />
           <Route path="Qeydiyyat" element={<Register />} />
           <Route path="Login" element={<Login />} />
+          <Route path="NövbəYarat" element={<QueueCreatePage />} />
         </Route>
         <Route path="Həkim-Dashboard" element={<DashLayout />}>
           <Route index element={<DrControlPanel />} />
