@@ -125,7 +125,7 @@ export const tableConfigs = [
         ]
     },
     {
-        pathMatch: "/Klinika-Dashboard/Hesabatlar",
+        pathMatch: "/Klinika-Dashboard/Hesabat",
         headers: [
             { label: "Həkim", key: "doctor" },
             { label: "Aylıq qazancı", key: "monthlyIncome" },
