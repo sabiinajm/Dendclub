@@ -94,7 +94,7 @@ function App() {
           <Route path="İdarəpaneli" element={<HsControlPanel />} />
           <Route path="Pasientlər" element={<HsPatients />} />
           <Route path="Həkimlər" element={<HsDoctors />} />
-          <Route path="Hesabatlar" element={<HsReports />} />
+          <Route path="Hesabat" element={<HsReports />} />
           <Route path="Hesabın" element={<HsAccount />} />
         </Route>
         <Route path="Ümumi-Admin-Panel" element={<DashLayout />}>
