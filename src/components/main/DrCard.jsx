@@ -1,12 +1,12 @@
 import { Rate } from 'antd';
 import { Link } from 'react-router-dom';
-function DrCard({doctorId}) {
+function DrCard({ doctorId, doctor }) {
     return (
         <div className="bg-white rounded-[12px] min-h-[433px] w-full xs:w-[288px] py-[16px] pt-[12px] pb-[28px] flex flex-col items-center">
             <div className="bg-[#F2F5F8] relative h-[203px] w-[90%] xs:w-[256px] flex justify-center items-end rounded-[12px]">
                 <img src="/assets/images/drAylin.png" alt="doctor" className="w-[full] xs:w-[184px] h-[184px]" />
                 <div className='w-[190px] absolute flex justify-center items-center bottom-[-20px] h-[40px] bg-[#0D9CD8] text-white rounded-[24px] text-base'>
-                    <h1>Dr.Aylin Əliyev</h1>
+                    <h3>{doctor?.name }</h3>
                 </div>
                 <div className='bg-white rounded-full w-[44px] h-[44px] flex justify-center items-center top-[10px] right-[10px] absolute'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -15,7 +15,7 @@ function DrCard({doctorId}) {
                 </div>
             </div>
             <div className='flex flex-col items-center pt-[28px]'>
-                <h3>Uzman Psixoloq</h3>
+                <p>{doctor?.specialty}</p>
                 <div className='w-full xs:w-[256px]'>
                     <div className='flex items-center justify-center'>
                         <Rate style={{ color: '#F4B814' }} className='py-3' />
