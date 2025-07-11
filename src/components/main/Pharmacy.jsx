@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom"
+import SearchBar from "./components/searchBar/SearchBar"
 
 function Pharmacy() {
     return (
         <main className="bg-[#f2f5f8] pt-[24px]">
             <div className="max-w-[1224px] mx-auto px-2">
-                <h1 className="pt-[7rem] text-[#030303] text-2xl md:text-[2.5rem] leading-[56px] text-center">Apteklərimiz</h1>
-                <div className="min-h-[245px] flex items-center">
+                <h1 className="pt-[3rem] text-[#030303] text-2xl md:text-[2.5rem] leading-[56px] text-center">Apteklərimiz</h1>
+                <div className="min-h-[150px] flex items-center">
                     <div className="flex flex-col md:flex-row gap-4 items-center">
-                        <div className="relative">
+                        {/* <div className="relative">
                             <input type="text" placeholder="Axtarın " className="w-[250px] md:w-[500px] bg-white py-[15px] rounded-[16px] pl-4 placeholder:text-[#636366]" />
                             <div className="absolute bottom-[6px] flex justify-center items-center right-[7px] h-[42px] w-[42px] rounded-[12px] bg-[#0D9CD8]">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -15,7 +16,8 @@ function Pharmacy() {
                                     <path d="M21.0004 20.9999L16.6504 16.6499" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                        </div>
+                        </div> */}
+                        <SearchBar />
                         <div className="relative w-[209px]">
                             <select className="w-full h-[48px] pl-[20px] rounded-[12px] bg-white outline-none appearance-none pr-10">
                                 <option value="">Şəhər və rayon</option>

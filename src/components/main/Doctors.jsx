@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import DrCard from "./DrCard";
 
 import { Pagination } from 'antd';
+import SearchBar from "./components/searchBar/SearchBar";
 
 function Doctors() {
     const [isAtStart, setIsAtStart] = useState(true);
@@ -27,7 +28,7 @@ function Doctors() {
         <main className="bg-[#f2f5f8]  pt-[34px]">
             <div className="max-w-[1224px] px-2 xl:px-0 mx-auto">
                 <h1 className="text-[#030303] text-2xl md:text-[2.5rem] leading-[56px] text-center">Peşəkar Həkimlərimiz</h1>
-                <div className="py-[32px] flex items-center justify-center">
+                {/* <div className="py-[32px] flex items-center justify-center">
                     <div className="relative">
                         <input type="text" placeholder="Axtarın " className="w-[250px] md:min-w-[713px] bg-white py-[15px] rounded-[16px] pl-4 placeholder:text-[#636366]" />
                         <div className="absolute bottom-[6px] flex justify-center items-center right-[7px] h-[42px] w-[42px] rounded-full bg-[#0D9CD8]">
@@ -37,7 +38,8 @@ function Doctors() {
                             </svg>
                         </div>
                     </div>
-                </div>
+                </div> */}
+                <SearchBar />
                 <div className={`relative overflow-x-hidden pb-[49px]`}>
                     {/* Swiper wrapper */}
                     <div className="flex justify-between items-center ">
