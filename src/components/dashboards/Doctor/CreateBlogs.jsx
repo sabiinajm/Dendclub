@@ -21,8 +21,8 @@ function CreateBlogs() {
             <div className="flex items-center gap-2 pt-[24px] pb-[36px]">
                 <Link to={'/Həkim-Dashboard/Bloq'} className="text-[#64717C] hover:underline">Bloqlar</Link>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <g clip-path="url(#clip0_1733_4556)">
-                        <path d="M6 4L10 8L6 12" stroke="#D1D1D6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <g clipPath="url(#clip0_1733_4556)">
+                        <path d="M6 4L10 8L6 12" stroke="#D1D1D6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </g>
                     <defs>
                         <clipPath id="clip0_1733_4556">
@@ -57,7 +57,7 @@ function CreateBlogs() {
                 <label className="flex flex-col items-center justify-center min-h-[182px] w-full cursor-pointer border border-dashed border-[#0D9CD8] rounded-xl bg-[#F2F5F8] text-gray-600 px-4 py-4 hover:bg-gray-200 transition">
                     <div className="mb-[16px] h-[98px] w-[112px] flex justify-center items-center border border-[#D1D1D6] rounded-xl">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M15 8H15.01M3 16L8 11C8.928 10.107 10.072 10.107 11 11L16 16M14 14L15 13C15.928 12.107 17.072 12.107 18 13L21 16M3 6C3 5.20435 3.31607 4.44129 3.87868 3.87868C4.44129 3.31607 5.20435 3 6 3H18C18.7956 3 19.5587 3.31607 20.1213 3.87868C20.6839 4.44129 21 5.20435 21 6V18C21 18.7956 20.6839 19.5587 20.1213 20.1213C19.5587 20.6839 18.7956 21 18 21H6C5.20435 21 4.44129 20.6839 3.87868 20.1213C3.31607 19.5587 3 18.7956 3 18V6Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 8H15.01M3 16L8 11C8.928 10.107 10.072 10.107 11 11L16 16M14 14L15 13C15.928 12.107 17.072 12.107 18 13L21 16M3 6C3 5.20435 3.31607 4.44129 3.87868 3.87868C4.44129 3.31607 5.20435 3 6 3H18C18.7956 3 19.5587 3.31607 20.1213 3.87868C20.6839 4.44129 21 5.20435 21 6V18C21 18.7956 20.6839 19.5587 20.1213 20.1213C19.5587 20.6839 18.7956 21 18 21H6C5.20435 21 4.44129 20.6839 3.87868 20.1213C3.31607 19.5587 3 18.7956 3 18V6Z" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </div>
                     <span className="text-sm">Şəkli bura buraxın və ya <span className="text-[#0D9CD8]">Seçin</span></span>

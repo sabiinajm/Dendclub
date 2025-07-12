@@ -1,8 +1,8 @@
 import { useRef, useState, useMemo } from "react";
-import DrCard from "./DrCard";
 
 import { Pagination } from 'antd';
 import SearchBar from "./components/searchBar/SearchBar";
+import DrCard from "./components/DrCard/DrCard";
 
 const fakeDoctors = [...Array(20)].map((_, i) => ({
     id: i,
@@ -36,15 +36,15 @@ function Doctors() {
         if (!q) return fakeDoctors;
 
         const startsWith = str =>
-    str
-      .toLowerCase()
-      .split(/\s+/)               
-      .some(word => word.startsWith(q));
+            str
+                .toLowerCase()
+                .split(/\s+/)
+                .some(word => word.startsWith(q));
 
-  return fakeDoctors.filter(
-    doc => startsWith(doc.name) || startsWith(doc.specialty)
-  );
-}, [searchTerm]);
+        return fakeDoctors.filter(
+            doc => startsWith(doc.name) || startsWith(doc.specialty)
+        );
+    }, [searchTerm]);
 
     return (
         <main className="bg-[#f2f5f8]  pt-[34px]">

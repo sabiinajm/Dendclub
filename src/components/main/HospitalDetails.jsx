@@ -1,5 +1,5 @@
 import { Rate } from "antd"
-import DrCard from "./DrCard"
+import DrCard from "./components/DrCard/DrCard"
 
 function HospitalDetails() {
     return (
@@ -19,8 +19,8 @@ function HospitalDetails() {
                 </div>
                 <div className="flex flex-col lg:flex-row justify-between w-full gap-9 pb-[80px]">
                     <div>
-                        <h1 className="text-[1.3rem] pb-[13px] md:text-[2.4rem] text-[#2C2C2E] font-medium">İstanbul NS Klinika </h1>
-                        <p className="text-[1rem] md:text-[1.4rem] text-[#64717C]">İstanbul Ns Klinikası Azərbaycanda yüksək səviyyəli tibbi xidmətlər təklif edən tanınmış bir klinikadır. Klinika, müasir tibbi texnologiyalar və avadanlıqlarla təchiz olunub və geniş ixtisaslaşmış həkim heyəti ilə çalışır. İstanbul Ns Klinikasında nevrologiya, endokrinologiya, kardiologiya, stomatologiya və digər sahələr üzrə ixtisaslı mütəxəssislər fəaliyyət göstərir. Klinika, həmçinin xəstələrinə rahat və təhlükəsiz şərait təmin edən peşəkar və mehriban heyəti ilə seçilir. Klinikanın məqsədi xəstələrə keyfiyyətli və əlçatan tibbi yardım göstərməklə sağlamlığına qayğı göstərməkdir.</p>
+                        <h1 className="text-[1.3rem] pb-[13px] md:text-[2.4rem] text-[#2C2C2E] font-medium px-4">İstanbul NS Klinika </h1>
+                        <p className="text-[1rem] md:text-[1.4rem] text-[#64717C] p-4">İstanbul Ns Klinikası Azərbaycanda yüksək səviyyəli tibbi xidmətlər təklif edən tanınmış bir klinikadır. Klinika, müasir tibbi texnologiyalar və avadanlıqlarla təchiz olunub və geniş ixtisaslaşmış həkim heyəti ilə çalışır. İstanbul Ns Klinikasında nevrologiya, endokrinologiya, kardiologiya, stomatologiya və digər sahələr üzrə ixtisaslı mütəxəssislər fəaliyyət göstərir. Klinika, həmçinin xəstələrinə rahat və təhlükəsiz şərait təmin edən peşəkar və mehriban heyəti ilə seçilir. Klinikanın məqsədi xəstələrə keyfiyyətli və əlçatan tibbi yardım göstərməklə sağlamlığına qayğı göstərməkdir.</p>
                     </div>
                     <img className="object-cover h-[506px] w-[566px] rounded-[20px]" src="/assets/images/klinika2.jpg" alt="" />
                 </div>
@@ -28,7 +28,7 @@ function HospitalDetails() {
                     <h3 className="text-[#2C2C2E] text-[1.1rem] font-medium md:text-[2rem]">Ünvan</h3>
                     <p className="text-[#64717C] md:text-xl pb-[32px]">Bakı,Süleyman Rüstəmov küçəsi</p>
                 </div>
-                <iframe className="w-full rounded-[12px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d384.7404828742046!2d49.88072826669062!3d40.39405115027642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d3081f19f11%3A0x1017bf5178c72b52!2sN%C9%99sir%20Aptek!5e0!3m2!1sen!2saz!4v1734374107520!5m2!1sen!2saz" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe className="w-full rounded-[12px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d384.7404828742046!2d49.88072826669062!3d40.39405115027642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d3081f19f11%3A0x1017bf5178c72b52!2sN%C9%99sir%20Aptek!5e0!3m2!1sen!2saz!4v1734374107520!5m2!1sen!2saz" width="600" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 <div className="py-[80px]">
                     <h3 className="text-[#222B45] border-b border-[#999] mb-[32px] text-[1.1rem] font-medium md:text-[2rem]">Xidmətlər</h3>
                     <ul className="text-[.8rem] sm:text-base grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px] md:gap-[80px] pl-5 list-disc text-[#2C2C2E] marker:text-[#0D9CD8]">
@@ -59,8 +59,8 @@ function HospitalDetails() {
                 </div>
                 <div className="pb-[80px]">
                     <h3 className="text-[#222B45] pb-[22px] text-[1.1rem] font-medium md:text-[2rem]">Əlaqə</h3>
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
-                        <div className="flex flex-col sm:flex-row gap-6">
+                    <div className="flex flex-col md:flex-row sm:justify-between gap-6">
+                        <div className="flex flex-col md:flex-row gap-6">
                             <div className="flex items-center gap-3">
                                 <div className="h-[50px] w-[50px] bg-white rounded-[12px] flex justify-center items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="51" viewBox="0 0 50 51" fill="none">
@@ -68,7 +68,7 @@ function HospitalDetails() {
                                         <path fillRule="evenodd" clipRule="evenodd" d="M24.7059 27.6176C23.9266 27.6176 23.2941 26.9852 23.2941 26.2059C23.2941 25.4266 23.9266 24.7941 24.7059 24.7941C25.4852 24.7941 26.1176 25.4266 26.1176 26.2059C26.1176 26.9852 25.4852 27.6176 24.7059 27.6176ZM30.508 13.5C34.4439 13.5 37.4118 16.844 37.4118 21.2785V29.7314C37.4118 32.0009 36.6411 34.0514 35.2405 35.5062C33.9841 36.8095 32.3542 37.5 30.5269 37.5H18.8813C17.0575 37.5 15.4288 36.8108 14.1712 35.5062C12.7706 34.0514 12 32.0009 12 29.7314V21.2785C12 16.844 14.9679 13.5 18.9037 13.5H30.508ZM30.508 15.3462H18.9037C15.9311 15.3462 13.7729 17.8409 13.7729 21.2785V29.7314C13.7729 31.5074 14.3592 33.0938 15.4229 34.1978C16.3401 35.1517 17.5374 35.6538 18.8848 35.6538H30.508C30.5104 35.6514 30.5199 35.6538 30.5269 35.6538C31.8755 35.6538 33.0717 35.1517 33.9889 34.1978C35.0538 33.0938 35.6388 31.5074 35.6388 29.7314V21.2785C35.6388 17.8409 33.4806 15.3462 30.508 15.3462ZM32.3708 21.0431C32.6793 21.4382 32.6213 22.0191 32.2419 22.3416L26.9894 26.7871C26.3251 27.3361 25.5309 27.6105 24.7378 27.6105C23.9471 27.6105 23.1587 27.3385 22.4992 26.7945L17.1982 22.3441C16.8164 22.0241 16.7573 21.4419 17.0634 21.0456C17.3719 20.6505 17.9298 20.5878 18.3104 20.9065L23.6067 25.3521C24.2721 25.901 25.2094 25.901 25.8795 25.3471L31.1226 20.909C31.5032 20.5853 32.0611 20.6468 32.3708 21.0431Z" fill="#0D9CD8" />
                                     </svg>
                                 </div>
-                                <p className="text-[#222B45] text-[.8rem] sm:text-[1.3rem]">dr.zarinababayeva@gmail.com</p>
+                                <p className="text-[#222B45] text-[.8rem] md:text-[1.3rem]">dr.zarinababayeva@gmail.com</p>
                             </div>
                             <div className="flex items-center gap-3">
                                 <div className="h-[50px] w-[50px] bg-white rounded-[12px] flex justify-center items-center">
@@ -76,7 +76,7 @@ function HospitalDetails() {
                                         <path d="M20.8375 20.3538L21.4455 19.7498L20.0335 18.3311L19.4282 18.9351L20.8375 20.3538ZM23.4842 19.4964L26.0322 20.8818L26.9855 19.1244L24.4389 17.7404L23.4842 19.4964ZM26.5215 23.6338L24.6282 25.5178L26.0375 26.9351L27.9309 25.0524L26.5215 23.6338ZM23.4735 26.1231C21.5402 26.3044 16.5402 26.1431 11.1242 20.7591L9.71355 22.1764C15.6229 28.0524 21.2482 28.3404 23.6602 28.1151L23.4735 26.1231ZM11.1242 20.7591C5.96288 15.6258 5.10688 11.3098 5.00021 9.43643L3.00288 9.54976C3.13621 11.9071 4.19621 16.6911 9.71355 22.1764L11.1242 20.7591ZM12.9575 12.5191L13.3402 12.1378L11.9322 10.7204L11.5495 11.1004L12.9575 12.5191ZM13.6442 7.2911L11.9642 5.04576L10.3629 6.24576L12.0429 8.48976L13.6442 7.2911ZM6.30955 4.55643L4.21621 6.63643L5.62688 8.0551L7.71888 5.9751L6.30955 4.55643ZM12.2535 11.8098C11.5469 11.1004 11.5469 11.1004 11.5469 11.1031H11.5442L11.5402 11.1084C11.4768 11.1723 11.4201 11.2425 11.3709 11.3178C11.2989 11.4244 11.2202 11.5644 11.1535 11.7418C10.9912 12.1995 10.9508 12.6916 11.0362 13.1698C11.2149 14.3231 12.0095 15.8471 14.0442 17.8711L15.4549 16.4524C13.5495 14.5591 13.0962 13.4071 13.0122 12.8631C12.9722 12.6044 13.0135 12.4764 13.0255 12.4471C13.0335 12.4293 13.0335 12.4267 13.0255 12.4391C13.0137 12.4575 13.0003 12.4749 12.9855 12.4911L12.9722 12.5044L12.9589 12.5164L12.2535 11.8098ZM14.0442 17.8711C16.0802 19.8951 17.6122 20.6844 18.7669 20.8604C19.3575 20.9511 19.8335 20.8791 20.1949 20.7444C20.3973 20.6704 20.5864 20.5641 20.7549 20.4298L20.8215 20.3698L20.8309 20.3618L20.8349 20.3578L20.8362 20.3551C20.8362 20.3551 20.8375 20.3538 20.1322 19.6444C19.4255 18.9351 19.4295 18.9338 19.4295 18.9338L19.4322 18.9311L19.4349 18.9284L19.4429 18.9218L19.4562 18.9084L19.5069 18.8684C19.5193 18.8604 19.5162 18.8613 19.4975 18.8711C19.4642 18.8831 19.3335 18.9244 19.0709 18.8844C18.5189 18.7991 17.3589 18.3458 15.4549 16.4524L14.0442 17.8711ZM11.9642 5.04443C10.6042 3.2311 7.93221 2.9431 6.30955 4.55643L7.71888 5.9751C8.42821 5.26976 9.68688 5.3431 10.3629 6.24576L11.9642 5.04443ZM5.00155 9.43776C4.97488 8.97643 5.18688 8.49376 5.62688 8.05643L4.21488 6.63776C3.49888 7.34976 2.93488 8.35776 3.00288 9.54976L5.00155 9.43776ZM24.6282 25.5178C24.2629 25.8831 23.8682 26.0884 23.4749 26.1244L23.6602 28.1151C24.6402 28.0231 25.4415 27.5298 26.0389 26.9364L24.6282 25.5178ZM13.3402 12.1378C14.6535 10.8324 14.7509 8.76976 13.6455 7.29243L12.0442 8.4911C12.5815 9.20976 12.5015 10.1524 11.9309 10.7218L13.3402 12.1378ZM26.0335 20.8831C27.1229 21.4751 27.2922 22.8698 26.5229 23.6351L27.9335 25.0524C29.7202 23.2751 29.1695 20.3111 26.9869 19.1258L26.0335 20.8831ZM21.4455 19.7511C21.9575 19.2418 22.7815 19.1164 23.4855 19.4978L24.4402 17.7418C22.9949 16.9551 21.2029 17.1724 20.0349 18.3324L21.4455 19.7511Z" fill="#0D9CD8" />
                                     </svg>
                                 </div>
-                                <p className="text-[#222B45] text-[.8rem] sm:text-[1.3rem]">+994 (50) 7777777</p>
+                                <p className="text-[#222B45] text-[.8rem] md:text-[1.3rem]">+994 (50) 7777777</p>
                             </div>
                         </div>
 
@@ -96,23 +96,23 @@ function HospitalDetails() {
                                     <path d="M15.0003 6.40918C12.5314 6.40918 12.2215 6.42017 11.252 6.46414C10.284 6.50858 9.62358 6.66151 9.04574 6.88659C8.44784 7.11885 7.94068 7.42948 7.43543 7.93461C6.92971 8.43974 6.6193 8.94726 6.38625 9.54462C6.16085 10.1229 6.00756 10.7838 5.9641 11.751C5.92064 12.7207 5.90918 13.0308 5.90918 15.4996C5.90918 17.9684 5.92016 18.2776 5.9641 19.2472C6.00851 20.215 6.1618 20.8754 6.38625 21.4536C6.61882 22.0515 6.92923 22.5585 7.43496 23.0641C7.94021 23.5697 8.44737 23.8813 9.04478 24.1136C9.6231 24.3382 10.284 24.4916 11.2515 24.536C12.2215 24.58 12.5309 24.591 14.9998 24.591C17.4688 24.591 17.7778 24.58 18.7477 24.536C19.7157 24.4916 20.3771 24.3387 20.9554 24.1136C21.5533 23.8813 22.0595 23.5702 22.5647 23.0646C23.0705 22.5595 23.3809 22.052 23.6139 21.4546C23.8374 20.8764 23.9907 20.2154 24.0361 19.2482C24.0795 18.2785 24.091 17.9693 24.091 15.5006C24.091 13.0318 24.0795 12.7216 24.0361 11.752C23.9907 10.7843 23.8374 10.1238 23.6139 9.54557C23.3809 8.94773 23.0705 8.44069 22.5647 7.93508C22.059 7.42948 21.5533 7.11885 20.9549 6.88659C20.3752 6.66198 19.7142 6.50858 18.7467 6.46414C17.7768 6.42017 17.4683 6.40918 14.9984 6.40918H15.0003ZM14.1851 8.04739C14.4273 8.04691 14.6971 8.04739 15.0008 8.04739C17.4282 8.04739 17.7157 8.05599 18.6741 8.09948C19.5605 8.1401 20.0414 8.28824 20.3618 8.4125C20.7859 8.57737 21.0886 8.77426 21.4067 9.09253C21.7247 9.41081 21.922 9.71379 22.0872 10.1382C22.2118 10.4583 22.3599 10.9391 22.4005 11.8256C22.4439 12.7838 22.4535 13.0719 22.4535 15.4977C22.4535 17.9239 22.4439 18.2116 22.4005 19.1698C22.3599 20.0563 22.2118 20.5371 22.0872 20.8572C21.9224 21.2816 21.7252 21.5836 21.4067 21.9014C21.0886 22.2197 20.7863 22.4166 20.3618 22.5815C20.0418 22.7067 19.5605 22.8543 18.6741 22.8945C17.7157 22.938 17.4277 22.9475 15.0008 22.9475C12.5734 22.9475 12.2854 22.938 11.3275 22.8945C10.4411 22.8534 9.96025 22.7057 9.63933 22.581C9.21527 22.4161 8.91202 22.2192 8.59397 21.901C8.27592 21.5827 8.0787 21.2807 7.91346 20.8563C7.78882 20.5361 7.64078 20.0553 7.60019 19.1689C7.55673 18.2107 7.54814 17.9225 7.54814 15.4953C7.54814 13.0676 7.55673 12.7814 7.60019 11.8232C7.64078 10.9367 7.78882 10.456 7.91346 10.1353C8.07822 9.71092 8.27545 9.40794 8.59397 9.08967C8.91202 8.77139 9.21527 8.5745 9.63933 8.40915C9.95977 8.28394 10.4411 8.13628 11.3275 8.09565C12.1661 8.0579 12.4913 8.04643 14.1856 8.04452L14.1851 8.04739ZM19.8532 9.55704C19.251 9.55704 18.7625 10.045 18.7625 10.6476C18.7625 11.2497 19.251 11.7386 19.8532 11.7386C20.4554 11.7386 20.9439 11.2502 20.9439 10.6476C20.9439 10.045 20.4554 9.55657 19.8532 9.55704ZM15.0003 10.8316C12.422 10.8316 10.3318 12.9219 10.3318 15.5001C10.3318 18.0783 12.422 20.1676 15.0003 20.1676C17.5786 20.1676 19.6679 18.0783 19.6679 15.5001C19.6679 12.9219 17.5786 10.8316 15.0003 10.8316ZM15.0003 12.4698C16.6737 12.4698 18.0309 13.8265 18.0309 15.5001C18.0309 17.1737 16.6741 18.5304 15.0003 18.5304C13.3265 18.5304 11.9698 17.1737 11.9698 15.5001C11.9703 13.826 13.327 12.4698 15.0003 12.4698Z" fill="white" />
                                     <defs>
                                         <radialGradient id="paint0_radial_682_7330" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(26.6929 14.7182) rotate(164.25) scale(15.9737 11.5084)">
-                                            <stop stop-color="#FF005F" />
-                                            <stop offset="1" stop-color="#FC01D8" />
+                                            <stop stopColor="#FF005F" />
+                                            <stop offset="1" stopColor="#FC01D8" />
                                         </radialGradient>
                                         <radialGradient id="paint1_radial_682_7330" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(9.14038 29.9261) rotate(-90) scale(19.9559 21.1725)">
-                                            <stop stop-color="#FFCC00" />
-                                            <stop offset="0.1242" stop-color="#FFCC00" />
-                                            <stop offset="0.5672" stop-color="#FE4A05" />
-                                            <stop offset="0.6942" stop-color="#FF0F3F" />
-                                            <stop offset="1" stop-color="#FE0657" stop-opacity="0" />
+                                            <stop stopColor="#FFCC00" />
+                                            <stop offset="0.1242" stopColor="#FFCC00" />
+                                            <stop offset="0.5672" stopColor="#FE4A05" />
+                                            <stop offset="0.6942" stopColor="#FF0F3F" />
+                                            <stop offset="1" stopColor="#FE0657" stopOpacity="0" />
                                         </radialGradient>
                                         <radialGradient id="paint2_radial_682_7330" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.6315 27.6478) rotate(-59.8701) scale(8.2519 10.743)">
-                                            <stop stop-color="#FFCC00" />
-                                            <stop offset="1" stop-color="#FFCC00" stop-opacity="0" />
+                                            <stop stopColor="#FFCC00" />
+                                            <stop offset="1" stopColor="#FFCC00" stopOpacity="0" />
                                         </radialGradient>
                                         <radialGradient id="paint3_radial_682_7330" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(5.89193 4.01883) rotate(164.274) scale(15.7965 5.38195)">
-                                            <stop stop-color="#780CFF" />
-                                            <stop offset="1" stop-color="#820BFF" stop-opacity="0" />
+                                            <stop stopColor="#780CFF" />
+                                            <stop offset="1" stopColor="#820BFF" stopOpacity="0" />
                                         </radialGradient>
                                     </defs>
                                 </svg>

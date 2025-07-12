@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import DrCard from "./DrCard";
+import DrCard from "./components/DrCard/DrCard";
 
 function Home() {
     const [isAtStart, setIsAtStart] = useState(true);

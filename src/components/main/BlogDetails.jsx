@@ -1,4 +1,4 @@
-import BlogCard from "./BlogCard"
+import BlogCard from "./components/BlogCard/BlogCard"
 
 function BlogDetails() {
     return (

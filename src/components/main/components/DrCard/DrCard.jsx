@@ -2,11 +2,11 @@ import { Rate } from 'antd';
 import { Link } from 'react-router-dom';
 function DrCard({ doctorId, doctor }) {
     return (
-        <div className="bg-white rounded-[12px] min-h-[433px] w-full xs:w-[288px] py-[16px] pt-[12px] pb-[28px] flex flex-col items-center">
+        <div className="bg-white rounded-[12px] min-h-[433px] w-full xs:w-[278px] py-[16px] pt-[12px] pb-[28px] flex flex-col items-center">
             <div className="bg-[#F2F5F8] relative h-[203px] w-[90%] xs:w-[256px] flex justify-center items-end rounded-[12px]">
                 <img src="/assets/images/drAylin.png" alt="doctor" className="w-[full] xs:w-[184px] h-[184px]" />
                 <div className='w-[190px] absolute flex justify-center items-center bottom-[-20px] h-[40px] bg-[#0D9CD8] text-white rounded-[24px] text-base'>
-                    <h3>{doctor?.name }</h3>
+                    <h3>{doctor?.name || 'Dr. Leyla Aliyeva'}</h3>
                 </div>
                 <div className='bg-white rounded-full w-[44px] h-[44px] flex justify-center items-center top-[10px] right-[10px] absolute'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">

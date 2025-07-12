@@ -1,6 +1,6 @@
 import SearchBar from "./components/searchBar/SearchBar"
 import { useState, useMemo } from "react";
-import HospitalCard from "./HospitalCard";
+import HospitalCard from "./components/HospitalCard/HospitalCard";
 
 const fakeClinics = [...Array(20)].map((_, i) => ({
     id: i,
