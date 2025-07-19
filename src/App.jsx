@@ -53,7 +53,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={<Register />} />
+          <Route path="Ana-Səhifə" element={<Home />} />
           <Route path="Haqqımızda" element={<About />} />
           <Route path="Həkimlərimiz" element={<Doctors />} />
           <Route path="Həkimlərimiz/:id" element={<DoctorsDetails />} />
@@ -67,7 +68,6 @@ function App() {
           <Route path="Əlaqə" element={<Contact />} />
           <Route path="Çat" element={<OnlineChat />} />
           <Route path="Profil" element={<UserProfile />} />
-          <Route path="Qeydiyyat" element={<Register />} />
           <Route path="Login" element={<Login />} />
           <Route path="NövbəYarat" element={<QueueCreatePage />} />
         </Route>
